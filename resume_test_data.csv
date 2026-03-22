@@ -1,0 +1,501 @@
+resume_id,name,email,phone,skills_count,experience_years,has_linkedin,has_github,has_portfolio,has_summary,summary_length,project_count,has_education,education_score,page_count,action_verbs_count,metrics_count,role_keywords_count,work_experience_dates_count,certification_count,skills_per_project,context_validation_score,has_achievements,ats_score,job_role,experience_level,quality_tier,is_fraud
+RES_00362,Rohan Kumar,rohan.kumar39@outlook.com,+91-79163-20999,10,1,1,1,0,1,117,2,1,7,1,7,3,11,1,3,5.0,47,1,75,Data Engineer,Entry Level,Good,0
+RES_00074,Pooja Rao,pooja.rao20@company.com,+91-77099-53533,8,0,1,1,0,1,109,0,1,9,1,11,5,11,0,2,8.0,64,1,64,Data Engineer,Fresher,Good,0
+RES_00375,Neha Mehta,neha.mehta78@outlook.com,+91-90259-88581,6,1,0,1,0,0,0,1,0,4,1,6,2,6,1,1,6.0,43,0,52,UI/UX Designer,Entry Level,Fair,0
+RES_00156,Riya Kulkarni,riya.kulkarni51@yahoo.com,+91-94135-19961,5,1,1,0,0,1,62,2,1,5,3,0,2,4,2,0,2.5,27,0,61,UI/UX Designer,Entry Level,Poor,0
+RES_00105,Amit Reddy,amit.reddy96@yahoo.com,+91-84068-34512,7,0,1,0,1,1,215,2,1,10,1,12,9,9,1,0,3.5,77,1,75,UI/UX Designer,Fresher,Excellent,0
+RES_00395,Rohan Nair,rohan.nair46@outlook.com,+91-73234-44309,12,3,1,1,1,1,76,2,1,8,1,7,6,11,2,2,6.0,65,1,82,Software Engineer,Intermediate,Good,0
+RES_00378,Anjali Kulkarni,anjali.kulkarni22@outlook.com,+91-87112-81602,12,8,0,0,0,1,55,2,1,4,4,3,1,4,2,2,6.0,29,1,64,UI/UX Designer,Senior,Poor,0
+RES_00125,Riya Reddy,riya.reddy80@yahoo.com,+91-91732-60516,9,4,1,1,1,0,0,1,1,2,4,4,0,6,3,0,9.0,37,0,54,DevOps Engineer,Intermediate,Poor,0
+RES_00069,Rohan Kulkarni,rohan.kulkarni57@company.com,+91-92849-23777,16,4,1,0,1,0,0,2,1,6,2,11,6,10,3,2,8.0,60,1,76,Data Analyst,Intermediate,Good,0
+RES_00451,Riya Nair,riya.nair38@company.com,+91-75748-28906,37,1,1,0,0,1,81,10,1,4,1,4,0,13,0,2,3.7,14,0,41,Mobile Developer,Entry Level,Fair,1
+RES_00010,Karthik Shah,karthik.shah87@yahoo.com,+91-77575-16813,15,2,1,1,0,1,109,2,1,8,1,12,5,12,2,4,7.5,88,1,91,Data Analyst,Entry Level,Excellent,0
+RES_00195,Pooja Kulkarni,pooja.kulkarni74@company.com,+91-71375-69979,7,0,1,1,1,1,127,3,1,9,1,16,5,9,0,1,2.33,74,1,67,UI/UX Designer,Fresher,Excellent,0
+RES_00407,Anjali Sharma,anjali.sharma73@gmail.com,+91-87959-94871,8,0,1,1,0,1,109,0,1,7,1,12,7,7,2,1,8.0,50,1,79,UI/UX Designer,Fresher,Good,0
+RES_00085,Pooja Reddy,pooja.reddy80@outlook.com,+91-74464-86672,12,2,1,1,0,1,179,3,1,10,1,16,8,14,1,5,4.0,62,1,87,Software Engineer,Entry Level,Excellent,0
+RES_00372,Karthik Kulkarni,karthik.kulkarni71@gmail.com,+91-71028-16503,4,0,0,0,0,0,0,0,1,4,3,2,0,7,0,1,4.0,23,1,31,Data Scientist,Fresher,Poor,0
+RES_00389,Neha Mehta,neha.mehta54@outlook.com,+91-93500-16472,9,0,0,1,0,1,82,1,1,9,1,7,7,11,0,3,9.0,66,1,57,Software Engineer,Fresher,Good,0
+RES_00496,Anjali Nair,anjali.nair86@yahoo.com,+91-72540-80275,49,13,1,0,0,1,54,17,1,4,2,7,0,21,4,0,2.88,32,1,64,UI/UX Designer,Expert,Fair,1
+RES_00031,Meera Desai,meera.desai36@company.com,+91-84827-13973,11,2,1,1,0,1,165,4,1,9,1,11,7,9,1,5,2.75,84,1,84,UI/UX Designer,Entry Level,Excellent,0
+RES_00317,Arjun Patel,arjun.patel87@yahoo.com,+91-98037-26340,7,9,0,1,0,1,100,3,1,5,1,3,1,4,4,0,2.33,25,1,79,UI/UX Designer,Senior,Poor,0
+RES_00409,Sanjay Desai,sanjay.desai62@outlook.com,+91-88033-70392,15,7,1,1,1,0,0,4,1,5,2,3,1,9,3,0,3.75,40,0,77,Software Engineer,Senior,Fair,0
+RES_00491,Riya Nair,riya.nair81@gmail.com,+91-96943-37258,42,15,1,1,1,0,0,19,1,2,1,2,0,21,3,1,2.21,33,0,43,DevOps Engineer,Expert,Poor,1
+RES_00492,Aditya Patel,aditya.patel77@yahoo.com,+91-89695-43750,46,9,1,0,1,1,66,17,1,6,2,9,1,25,2,3,2.71,10,0,49,Data Scientist,Senior,Good,1
+RES_00281,Amit Kapoor,amit.kapoor89@outlook.com,+91-96277-57985,11,5,1,1,1,1,82,2,1,7,2,9,4,10,3,1,5.5,55,0,77,DevOps Engineer,Intermediate,Good,0
+RES_00357,Priya Sharma,priya.sharma60@yahoo.com,+91-88112-98722,6,2,1,0,0,0,0,1,1,7,1,6,2,7,2,2,6.0,55,0,60,Mobile Developer,Entry Level,Fair,0
+RES_00077,Anjali Reddy,anjali.reddy77@gmail.com,+91-79005-53030,11,4,1,1,0,1,140,3,1,8,2,12,7,12,3,3,3.67,68,1,88,Data Scientist,Intermediate,Good,0
+RES_00462,Amit Kumar,amit.kumar30@gmail.com,+91-82250-64423,50,10,1,0,1,1,97,22,1,9,2,10,0,23,2,3,2.27,16,0,73,DevOps Engineer,Senior,Good,1
+RES_00498,Pooja Patel,pooja.patel35@outlook.com,+91-72554-10458,39,2,1,0,1,1,83,12,1,7,1,11,0,16,0,3,3.25,34,1,46,UI/UX Designer,Entry Level,Good,1
+RES_00212,Arjun Singh,arjun.singh50@company.com,+91-77620-27544,13,5,0,0,1,1,70,3,1,6,2,3,1,7,3,2,4.33,57,0,80,Mobile Developer,Intermediate,Fair,0
+RES_00102,Pooja Patel,pooja.patel3@yahoo.com,+91-77583-27236,2,0,1,1,1,0,0,0,1,3,3,1,1,6,2,2,2.0,18,0,46,Data Engineer,Fresher,Poor,0
+RES_00335,Rohan Rao,rohan.rao7@yahoo.com,+91-72612-97072,11,3,1,1,0,1,94,3,1,7,1,8,4,9,3,1,3.67,57,0,85,Software Engineer,Intermediate,Fair,0
+RES_00476,Aditya Kulkarni,aditya.kulkarni36@yahoo.com,+91-75653-13755,48,4,0,0,1,0,0,14,1,3,3,4,0,15,0,0,3.43,18,0,24,Web Developer,Intermediate,Poor,1
+RES_00337,Rohan Desai,rohan.desai64@company.com,+91-82860-78186,20,4,0,0,0,1,104,3,1,9,2,15,5,14,2,2,6.67,80,0,91,Software Engineer,Intermediate,Excellent,0
+RES_00441,Rohan Gupta,rohan.gupta42@yahoo.com,+91-96048-68281,31,4,1,0,0,1,73,16,1,6,2,5,0,20,2,0,1.94,17,0,65,Data Analyst,Intermediate,Fair,1
+RES_00174,Pooja Kapoor,pooja.kapoor85@gmail.com,+91-93715-27716,16,7,1,1,0,1,146,5,1,8,2,7,7,8,5,1,3.2,55,0,94,Mobile Developer,Senior,Good,0
+RES_00003,Meera Reddy,meera.reddy65@gmail.com,+91-83257-58958,7,0,1,0,1,1,93,0,1,6,1,12,4,9,2,3,7.0,50,1,68,Web Developer,Fresher,Good,0
+RES_00334,Vikram Iyer,vikram.iyer61@gmail.com,+91-94554-24676,7,0,1,0,0,1,65,0,1,5,1,5,2,7,0,2,7.0,33,0,45,Web Developer,Fresher,Fair,0
+RES_00410,Arjun Reddy,arjun.reddy98@outlook.com,+91-99528-18801,18,7,1,1,1,1,158,8,1,10,2,14,7,9,3,5,2.25,87,1,96,UI/UX Designer,Senior,Excellent,0
+RES_00071,Karthik Nair,karthik.nair58@yahoo.com,+91-87192-11868,11,1,1,1,1,0,0,2,0,10,1,10,10,9,1,2,5.5,67,1,69,UI/UX Designer,Entry Level,Excellent,0
+RES_00210,Arjun Singh,arjun.singh64@company.com,+91-94295-26510,11,1,1,0,0,1,136,3,1,9,1,12,6,10,2,2,3.67,92,1,88,Mobile Developer,Entry Level,Excellent,0
+RES_00064,Aditya Shah,aditya.shah29@outlook.com,+91-70230-43568,10,3,1,0,1,0,0,2,1,3,1,2,1,6,3,2,5.0,40,1,68,DevOps Engineer,Intermediate,Poor,0
+RES_00385,Rahul Joshi,rahul.joshi1@company.com,+91-92005-10338,15,4,1,1,0,1,70,5,1,6,2,6,4,11,3,3,3.0,71,1,86,Software Engineer,Intermediate,Good,0
+RES_00094,Rahul Singh,rahul.singh84@company.com,+91-76817-42196,9,0,1,1,0,1,135,2,1,9,1,6,4,7,0,1,4.5,56,0,65,UI/UX Designer,Fresher,Good,0
+RES_00486,Riya Gupta,riya.gupta59@gmail.com,+91-90911-81559,47,4,1,0,1,1,80,20,1,8,2,12,1,18,2,2,2.35,21,0,71,Data Analyst,Intermediate,Good,1
+RES_00186,Vikram Desai,vikram.desai71@gmail.com,+91-96482-49916,7,1,1,0,0,1,111,3,1,9,1,8,5,11,2,3,2.33,60,1,78,Data Engineer,Entry Level,Good,0
+RES_00034,Anjali Reddy,anjali.reddy58@yahoo.com,+91-96356-41655,3,0,1,1,0,0,0,0,1,4,3,2,1,6,0,1,3.0,17,0,37,Data Analyst,Fresher,Poor,0
+RES_00078,Priya Rao,priya.rao6@yahoo.com,+91-83791-34097,13,2,1,0,0,1,147,2,1,10,1,20,5,11,2,5,6.5,61,1,88,Web Developer,Entry Level,Excellent,0
+RES_00001,Sneha Desai,sneha.desai56@yahoo.com,+91-83567-26296,8,3,0,1,0,0,0,2,1,6,1,6,4,8,2,2,4.0,41,1,70,DevOps Engineer,Intermediate,Fair,0
+RES_00012,Karthik Joshi,karthik.joshi9@yahoo.com,+91-83357-83050,14,5,1,0,0,1,82,4,1,5,2,6,4,9,2,2,3.5,37,0,84,Software Engineer,Intermediate,Fair,0
+RES_00416,Neha Reddy,neha.reddy85@outlook.com,+91-82775-72828,16,7,1,0,1,0,0,2,1,5,2,4,2,8,5,2,8.0,54,0,80,DevOps Engineer,Senior,Fair,0
+RES_00023,Rohan Patel,rohan.patel8@company.com,+91-90992-37491,8,2,1,0,1,1,142,3,1,6,1,8,3,10,1,2,2.67,60,1,76,DevOps Engineer,Entry Level,Good,0
+RES_00073,Neha Iyer,neha.iyer95@yahoo.com,+91-75449-36878,17,10,1,0,1,1,38,4,0,4,2,6,1,8,3,1,4.25,53,1,76,Data Analyst,Senior,Fair,0
+RES_00183,Rohan Kulkarni,rohan.kulkarni62@company.com,+91-70771-96585,8,1,1,1,0,0,0,2,1,7,1,8,2,9,2,1,4.0,51,0,76,Data Engineer,Entry Level,Fair,0
+RES_00132,Sneha Mehta,sneha.mehta58@outlook.com,+91-91123-97139,7,1,1,1,0,0,0,2,1,7,1,10,3,11,1,2,3.5,60,1,64,Software Engineer,Entry Level,Good,0
+RES_00411,Vikram Sharma,vikram.sharma76@gmail.com,+91-76761-94152,11,2,1,1,1,1,103,1,1,9,1,9,6,9,1,1,11.0,57,1,78,Web Developer,Entry Level,Good,0
+RES_00194,Pooja Joshi,pooja.joshi69@outlook.com,+91-84125-52037,28,13,1,0,0,1,155,8,1,10,2,12,5,12,3,3,3.5,63,1,92,DevOps Engineer,Expert,Excellent,0
+RES_00056,Divya Kulkarni,divya.kulkarni48@yahoo.com,+91-72793-53755,16,3,1,0,1,1,117,2,1,9,1,10,6,7,3,2,8.0,68,0,84,UI/UX Designer,Intermediate,Good,0
+RES_00149,Riya Desai,riya.desai16@outlook.com,+91-81290-25005,8,0,1,0,1,1,141,2,1,10,1,16,10,11,1,2,4.0,84,1,79,Web Developer,Fresher,Excellent,0
+RES_00019,Karthik Patel,karthik.patel11@company.com,+91-82401-63198,14,11,1,0,0,1,41,7,1,5,2,8,4,8,5,1,2.0,44,1,89,Data Analyst,Expert,Fair,0
+RES_00205,Karthik Desai,karthik.desai51@yahoo.com,+91-75765-34397,9,2,1,0,1,1,103,1,1,7,1,11,6,7,1,3,9.0,47,1,71,UI/UX Designer,Entry Level,Good,0
+RES_00079,Vikram Desai,vikram.desai85@outlook.com,+91-84626-52140,7,5,0,0,0,0,0,3,1,5,4,0,2,5,3,1,2.33,41,0,53,Web Developer,Intermediate,Poor,0
+RES_00495,Rohan Patel,rohan.patel30@outlook.com,+91-88513-26104,41,7,1,1,0,1,81,15,1,8,2,11,0,16,3,2,2.73,35,1,55,Data Engineer,Senior,Good,1
+RES_00263,Divya Rao,divya.rao41@gmail.com,+91-89782-74331,20,10,1,0,1,1,64,5,1,8,2,6,4,9,4,1,4.0,49,1,90,Web Developer,Senior,Good,0
+RES_00324,Rahul Joshi,rahul.joshi97@outlook.com,+91-76405-84554,14,4,1,1,1,1,66,2,1,6,2,10,4,9,2,3,7.0,60,1,85,Web Developer,Intermediate,Good,0
+RES_00484,Divya Joshi,divya.joshi70@outlook.com,+91-78569-62774,51,11,1,0,0,0,0,16,1,4,3,7,0,23,1,2,3.19,34,0,50,DevOps Engineer,Expert,Fair,1
+RES_00080,Sneha Mehta,sneha.mehta89@gmail.com,+91-74184-37664,17,17,1,1,0,0,0,6,1,6,2,7,5,12,2,3,2.83,67,1,82,Data Scientist,Expert,Good,0
+RES_00040,Pooja Patel,pooja.patel98@outlook.com,+91-78895-26739,15,10,1,1,1,1,142,5,1,9,2,17,12,9,3,2,3.0,81,1,93,UI/UX Designer,Senior,Excellent,0
+RES_00452,Priya Nair,priya.nair96@company.com,+91-91657-76716,35,2,0,0,1,0,0,10,1,4,4,1,0,18,0,2,3.5,20,1,34,DevOps Engineer,Entry Level,Poor,1
+RES_00047,Aditya Iyer,aditya.iyer81@outlook.com,+91-74106-66827,9,3,1,0,0,0,0,2,1,3,3,1,1,6,3,1,4.5,26,1,65,Data Analyst,Intermediate,Poor,0
+RES_00239,Meera Reddy,meera.reddy78@outlook.com,+91-77856-56885,8,2,1,1,1,1,84,2,1,9,1,11,4,11,2,1,4.0,63,0,84,Data Engineer,Entry Level,Good,0
+RES_00392,Meera Desai,meera.desai27@outlook.com,+91-75850-19659,14,4,1,1,0,1,102,5,1,7,2,10,6,10,2,3,2.8,67,1,88,DevOps Engineer,Intermediate,Good,0
+RES_00353,Arjun Kulkarni,arjun.kulkarni77@company.com,+91-70998-97411,7,1,1,1,0,1,104,1,1,9,1,7,4,7,2,3,7.0,65,1,75,UI/UX Designer,Entry Level,Good,0
+RES_00342,Sneha Desai,sneha.desai66@company.com,+91-98544-61580,13,7,1,0,0,0,0,5,1,7,2,6,3,10,2,2,2.6,49,1,76,DevOps Engineer,Senior,Good,0
+RES_00278,Priya Singh,priya.singh39@gmail.com,+91-88641-75945,12,5,1,1,1,1,106,3,0,9,2,9,7,10,2,2,4.0,49,0,86,Data Analyst,Intermediate,Good,0
+RES_00291,Meera Reddy,meera.reddy8@outlook.com,+91-76681-33741,21,6,1,1,1,1,68,5,1,9,2,8,3,10,5,1,4.2,67,1,98,DevOps Engineer,Senior,Good,0
+RES_00318,Rohan Sharma,rohan.sharma89@company.com,+91-98223-56362,2,0,0,1,0,0,0,0,0,4,4,3,2,6,0,1,2.0,24,1,24,DevOps Engineer,Fresher,Poor,0
+RES_00305,Vikram Singh,vikram.singh32@outlook.com,+91-95869-53633,18,14,1,1,0,0,0,8,1,9,3,12,6,11,4,2,2.25,64,0,90,Data Engineer,Expert,Good,0
+RES_00269,Divya Iyer,divya.iyer33@gmail.com,+91-78614-60367,5,2,0,1,0,0,0,2,1,4,1,5,3,6,1,1,2.5,34,0,58,UI/UX Designer,Entry Level,Fair,0
+RES_00070,Rahul Joshi,rahul.joshi25@gmail.com,+91-95995-80498,12,5,1,1,0,1,72,5,1,8,2,6,4,12,2,2,2.4,58,1,84,Data Scientist,Intermediate,Good,0
+RES_00456,Karthik Shah,karthik.shah19@company.com,+91-73507-94909,54,14,1,1,0,1,97,20,1,4,2,6,1,21,2,2,2.7,16,0,52,Web Developer,Expert,Fair,1
+RES_00466,Pooja Shah,pooja.shah50@gmail.com,+91-97829-68587,30,3,0,1,0,1,89,20,1,2,1,3,0,18,1,0,1.5,33,0,43,Data Scientist,Intermediate,Poor,1
+RES_00155,Amit Patel,amit.patel95@company.com,+91-76471-18264,10,8,0,0,0,1,45,5,1,4,2,6,2,8,4,2,2.0,51,0,76,DevOps Engineer,Senior,Fair,0
+RES_00083,Meera Reddy,meera.reddy32@yahoo.com,+91-95465-66717,12,5,1,0,0,0,0,4,1,8,2,7,5,10,3,3,3.0,55,0,81,DevOps Engineer,Intermediate,Good,0
+RES_00478,Amit Kulkarni,amit.kulkarni63@company.com,+91-91806-22293,30,3,1,1,1,0,0,17,1,6,1,5,0,14,0,2,1.76,12,0,36,DevOps Engineer,Intermediate,Fair,1
+RES_00173,Amit Desai,amit.desai25@outlook.com,+91-70734-87663,11,4,1,1,1,1,72,3,1,9,2,6,6,10,2,1,3.67,46,0,84,DevOps Engineer,Intermediate,Good,0
+RES_00322,Anjali Kulkarni,anjali.kulkarni47@yahoo.com,+91-98159-41748,18,9,1,1,0,1,197,7,1,9,2,12,10,14,2,5,2.57,84,1,93,Software Engineer,Senior,Excellent,0
+RES_00091,Neha Nair,neha.nair12@yahoo.com,+91-71138-75011,8,1,0,1,0,0,0,2,1,6,1,3,2,9,1,2,4.0,38,1,65,Data Engineer,Entry Level,Fair,0
+RES_00181,Sanjay Singh,sanjay.singh50@outlook.com,+91-95393-23941,8,0,0,0,1,1,72,1,1,4,1,4,1,8,2,0,8.0,53,1,62,Data Analyst,Fresher,Fair,0
+RES_00415,Vikram Rao,vikram.rao53@outlook.com,+91-75476-70877,11,1,1,0,1,0,0,3,1,8,1,7,6,7,2,2,3.67,61,1,79,UI/UX Designer,Entry Level,Good,0
+RES_00313,Meera Patel,meera.patel73@gmail.com,+91-93635-55402,16,9,1,1,0,1,57,3,1,5,2,3,2,7,4,2,5.33,41,0,86,Web Developer,Senior,Fair,0
+RES_00279,Amit Kumar,amit.kumar73@company.com,+91-86154-76418,10,5,1,0,0,1,43,4,1,6,2,5,3,9,2,0,2.5,44,0,71,Software Engineer,Intermediate,Fair,0
+RES_00382,Pooja Kumar,pooja.kumar45@company.com,+91-77467-34613,21,9,1,0,1,1,151,6,1,9,2,10,5,9,5,2,3.5,96,1,100,UI/UX Designer,Senior,Excellent,0
+RES_00473,Amit Reddy,amit.reddy58@yahoo.com,+91-77488-73852,37,6,1,1,0,1,132,14,1,7,2,6,0,23,0,3,2.64,25,1,52,Data Scientist,Senior,Good,1
+RES_00363,Priya Reddy,priya.reddy2@outlook.com,+91-94183-96415,13,2,1,1,0,1,205,2,1,8,1,12,12,10,2,2,6.5,92,1,85,Mobile Developer,Entry Level,Excellent,0
+RES_00325,Sneha Iyer,sneha.iyer28@yahoo.com,+91-85622-20646,16,10,1,1,1,1,127,8,1,10,2,11,11,14,4,2,2.0,66,1,95,Software Engineer,Senior,Excellent,0
+RES_00432,Vikram Sharma,vikram.sharma57@company.com,+91-98145-61143,40,1,1,0,1,0,0,17,1,5,3,4,0,22,0,2,2.35,25,1,42,Data Scientist,Entry Level,Poor,1
+RES_00348,Riya Mehta,riya.mehta48@company.com,+91-87409-58239,6,2,1,0,0,0,0,1,1,4,4,3,1,7,1,0,6.0,44,0,43,Software Engineer,Entry Level,Poor,0
+RES_00087,Pooja Kumar,pooja.kumar79@company.com,+91-97759-70557,6,1,1,0,0,1,149,2,1,7,1,9,3,11,2,3,3.0,64,0,77,Data Engineer,Entry Level,Good,0
+RES_00076,Riya Mehta,riya.mehta27@gmail.com,+91-92878-93393,7,0,1,1,0,1,114,3,1,10,1,14,6,10,0,2,2.33,80,1,67,Mobile Developer,Fresher,Excellent,0
+RES_00439,Priya Joshi,priya.joshi95@gmail.com,+91-90011-52586,36,10,1,0,0,1,64,16,1,4,2,7,0,17,1,0,2.25,23,0,44,DevOps Engineer,Senior,Fair,1
+RES_00016,Karthik Mehta,karthik.mehta16@gmail.com,+91-87170-64159,17,3,1,1,1,1,124,3,1,7,1,11,3,7,2,1,5.67,64,1,86,UI/UX Designer,Intermediate,Good,0
+RES_00250,Pooja Kapoor,pooja.kapoor51@company.com,+91-97500-10881,7,2,1,1,0,1,64,3,1,9,1,7,6,12,2,1,2.33,72,0,80,Data Scientist,Entry Level,Good,0
+RES_00434,Arjun Iyer,arjun.iyer87@outlook.com,+91-73588-72530,35,5,0,1,0,1,37,17,1,5,1,3,0,20,0,2,2.06,16,0,36,Data Scientist,Intermediate,Poor,1
+RES_00020,Arjun Shah,arjun.shah3@company.com,+91-88238-34974,12,4,1,1,1,1,80,4,1,9,2,10,6,8,3,3,3.0,46,1,92,Mobile Developer,Intermediate,Good,0
+RES_00323,Meera Sharma,meera.sharma66@outlook.com,+91-93325-29396,8,4,0,0,0,1,56,2,1,6,2,6,3,6,2,2,4.0,52,1,69,UI/UX Designer,Intermediate,Fair,0
+RES_00333,Neha Rao,neha.rao49@outlook.com,+91-83821-30578,16,6,0,0,0,0,0,3,1,7,2,6,4,8,5,1,5.33,39,0,79,DevOps Engineer,Senior,Fair,0
+RES_00057,Riya Kulkarni,riya.kulkarni31@outlook.com,+91-98667-89544,9,0,1,0,1,1,147,2,1,9,1,17,11,11,0,2,4.5,100,1,70,Web Developer,Fresher,Excellent,0
+RES_00302,Amit Kulkarni,amit.kulkarni82@gmail.com,+91-78421-74586,18,6,1,0,1,1,101,5,1,9,2,8,6,9,5,3,3.6,75,1,100,Web Developer,Senior,Good,0
+RES_00230,Sanjay Kapoor,sanjay.kapoor20@outlook.com,+91-80658-92296,6,2,1,1,0,1,88,1,1,6,1,8,4,12,1,2,6.0,53,1,68,Data Scientist,Entry Level,Good,0
+RES_00332,Pooja Reddy,pooja.reddy63@gmail.com,+91-77486-50360,9,3,1,1,0,0,0,4,1,4,1,3,4,7,3,1,2.25,56,0,74,Web Developer,Intermediate,Fair,0
+RES_00133,Meera Kulkarni,meera.kulkarni51@company.com,+91-82033-36657,11,4,1,1,0,0,0,5,1,7,2,9,3,10,2,1,2.2,46,1,74,DevOps Engineer,Intermediate,Good,0
+RES_00138,Sanjay Shah,sanjay.shah11@outlook.com,+91-79950-43425,13,3,1,0,0,1,142,2,1,6,1,10,5,9,3,2,6.5,52,0,84,Web Developer,Intermediate,Good,0
+RES_00424,Divya Kulkarni,divya.kulkarni83@yahoo.com,+91-89169-25681,16,8,1,0,0,1,212,8,1,8,2,10,10,11,2,5,2.0,77,1,88,Web Developer,Senior,Excellent,0
+RES_00336,Meera Reddy,meera.reddy90@company.com,+91-72795-22970,4,2,1,0,0,0,0,1,0,3,1,4,1,6,1,0,4.0,32,0,49,DevOps Engineer,Entry Level,Poor,0
+RES_00026,Aditya Iyer,aditya.iyer2@company.com,+91-86980-65558,11,7,0,1,0,1,34,4,1,6,2,5,3,6,5,1,2.75,35,0,79,UI/UX Designer,Senior,Fair,0
+RES_00465,Amit Kulkarni,amit.kulkarni10@gmail.com,+91-98923-76686,35,9,1,0,1,0,0,15,0,8,2,7,1,24,0,3,2.33,21,1,49,Data Engineer,Senior,Good,1
+RES_00282,Priya Kapoor,priya.kapoor27@gmail.com,+91-71727-30215,17,9,1,1,1,1,175,8,1,8,3,12,7,13,3,4,2.12,78,1,92,Data Engineer,Senior,Excellent,0
+RES_00248,Meera Shah,meera.shah38@outlook.com,+91-87806-66152,11,4,1,0,0,1,93,3,1,6,2,3,4,9,3,0,3.67,42,0,79,Data Engineer,Intermediate,Fair,0
+RES_00238,Amit Nair,amit.nair49@company.com,+91-90800-97268,11,5,1,1,0,1,67,3,1,7,2,10,7,11,2,2,3.67,63,1,80,Software Engineer,Intermediate,Good,0
+RES_00118,Amit Sharma,amit.sharma45@outlook.com,+91-95750-11223,5,0,1,1,0,1,64,1,1,9,1,9,5,11,0,2,5.0,48,1,56,Software Engineer,Fresher,Good,0
+RES_00043,Riya Singh,riya.singh93@yahoo.com,+91-89791-68418,8,1,1,1,0,1,192,4,1,10,1,18,9,10,2,2,2.0,61,1,92,Mobile Developer,Entry Level,Excellent,0
+RES_00221,Karthik Desai,karthik.desai71@gmail.com,+91-75692-77137,15,8,1,0,0,0,0,2,1,4,2,6,2,7,4,1,7.5,49,0,73,Web Developer,Senior,Fair,0
+RES_00177,Sneha Shah,sneha.shah59@company.com,+91-81051-58323,7,2,0,1,0,0,0,1,1,4,1,2,0,7,2,1,7.0,27,0,55,Data Scientist,Entry Level,Poor,0
+RES_00321,Arjun Gupta,arjun.gupta26@gmail.com,+91-70130-70844,17,8,1,0,0,1,120,5,1,8,2,9,5,8,2,3,3.4,51,1,87,Mobile Developer,Senior,Good,0
+RES_00154,Anjali Reddy,anjali.reddy22@outlook.com,+91-84391-70994,8,3,1,0,1,0,0,4,1,7,1,3,4,7,2,0,2.0,53,0,74,Web Developer,Intermediate,Fair,0
+RES_00232,Divya Sharma,divya.sharma58@company.com,+91-88688-89647,23,18,1,0,1,1,190,5,1,9,2,17,7,9,3,4,4.6,86,1,96,UI/UX Designer,Expert,Excellent,0
+RES_00228,Sneha Rao,sneha.rao78@company.com,+91-98902-71097,18,9,1,0,0,1,247,5,1,10,3,13,12,10,5,3,3.6,86,1,99,Mobile Developer,Senior,Excellent,0
+RES_00418,Vikram Nair,vikram.nair37@outlook.com,+91-92644-29691,12,4,1,1,1,1,228,6,1,10,2,16,6,15,3,2,2.0,60,1,93,Data Scientist,Intermediate,Excellent,0
+RES_00204,Priya Mehta,priya.mehta2@yahoo.com,+91-80531-64205,18,7,1,0,0,1,168,6,0,9,2,10,9,12,4,2,3.0,65,1,89,DevOps Engineer,Senior,Excellent,0
+RES_00127,Priya Kulkarni,priya.kulkarni88@company.com,+91-89216-65478,6,1,1,1,1,1,139,1,1,7,1,11,6,7,2,2,6.0,51,0,71,UI/UX Designer,Entry Level,Good,0
+RES_00330,Neha Rao,neha.rao82@company.com,+91-80674-68438,5,0,0,1,0,1,62,2,1,7,1,4,2,7,1,1,2.5,58,1,65,Web Developer,Fresher,Fair,0
+RES_00032,Amit Kapoor,amit.kapoor23@yahoo.com,+91-99384-43379,14,10,1,0,0,1,62,5,1,9,3,6,5,12,4,2,2.8,61,1,88,Data Scientist,Senior,Good,0
+RES_00114,Riya Kumar,riya.kumar45@yahoo.com,+91-99151-44929,5,1,1,1,0,0,0,1,1,4,1,7,3,9,1,2,5.0,60,0,57,Software Engineer,Entry Level,Fair,0
+RES_00471,Pooja Sharma,pooja.sharma17@company.com,+91-89295-94167,42,5,0,0,1,1,74,16,1,4,2,8,0,18,1,1,2.62,20,1,51,Data Analyst,Intermediate,Fair,1
+RES_00272,Arjun Desai,arjun.desai13@yahoo.com,+91-79436-72233,7,1,1,0,0,1,116,2,1,9,1,8,4,11,2,1,3.5,75,1,81,Software Engineer,Entry Level,Good,0
+RES_00141,Rohan Kapoor,rohan.kapoor48@company.com,+91-81813-82399,4,0,0,1,0,1,35,2,1,6,1,8,3,7,1,2,2.0,47,1,59,Web Developer,Fresher,Fair,0
+RES_00058,Divya Joshi,divya.joshi74@outlook.com,+91-72897-60859,16,5,1,0,0,1,144,5,1,6,2,6,5,10,2,3,3.2,56,0,82,DevOps Engineer,Intermediate,Good,0
+RES_00193,Sneha Singh,sneha.singh61@yahoo.com,+91-81516-87037,13,7,1,0,1,1,148,4,1,8,2,8,5,9,3,2,3.25,72,0,89,Web Developer,Senior,Good,0
+RES_00025,Rahul Kulkarni,rahul.kulkarni21@outlook.com,+91-99561-49077,23,7,1,0,1,1,203,8,1,8,2,13,11,11,5,5,2.88,77,1,99,Web Developer,Senior,Excellent,0
+RES_00018,Karthik Shah,karthik.shah8@outlook.com,+91-80307-72763,3,0,1,0,0,1,36,1,1,2,4,3,1,7,0,1,3.0,43,0,32,Data Scientist,Fresher,Poor,0
+RES_00266,Priya Shah,priya.shah22@gmail.com,+91-86847-27944,10,1,1,1,0,1,172,4,1,9,1,20,8,15,2,0,2.5,96,1,91,Data Scientist,Entry Level,Excellent,0
+RES_00067,Rohan Kulkarni,rohan.kulkarni33@outlook.com,+91-74154-47609,12,5,1,0,0,0,0,2,1,7,2,6,3,9,3,1,6.0,33,0,71,Data Engineer,Intermediate,Fair,0
+RES_00209,Rohan Nair,rohan.nair5@yahoo.com,+91-99320-39113,9,2,1,1,1,1,215,2,1,10,1,13,7,15,1,5,4.5,92,1,84,Data Scientist,Entry Level,Excellent,0
+RES_00480,Sanjay Desai,sanjay.desai63@yahoo.com,+91-78734-47825,50,3,1,0,1,1,96,15,1,4,1,5,0,20,0,1,3.33,19,0,56,Data Engineer,Intermediate,Fair,1
+RES_00095,Divya Mehta,divya.mehta13@company.com,+91-74282-95147,13,3,1,0,1,0,0,4,1,6,1,4,4,7,2,2,3.25,58,0,81,Web Developer,Intermediate,Fair,0
+RES_00254,Divya Desai,divya.desai9@gmail.com,+91-72607-47634,18,5,1,0,1,1,124,3,1,8,2,14,10,12,3,2,6.0,99,1,95,DevOps Engineer,Intermediate,Excellent,0
+RES_00267,Karthik Sharma,karthik.sharma82@gmail.com,+91-73436-41433,8,2,1,1,0,0,0,3,1,7,1,12,7,11,1,3,2.67,54,1,75,Software Engineer,Entry Level,Good,0
+RES_00024,Meera Desai,meera.desai75@yahoo.com,+91-94359-26858,8,1,1,1,1,1,113,2,1,9,1,10,3,10,1,1,4.0,71,1,77,DevOps Engineer,Entry Level,Good,0
+RES_00223,Divya Reddy,divya.reddy88@gmail.com,+91-85862-97581,7,1,1,1,0,0,0,2,1,4,1,0,0,7,1,1,3.5,40,0,61,Software Engineer,Entry Level,Poor,0
+RES_00262,Rohan Reddy,rohan.reddy65@company.com,+91-95292-88865,15,9,1,0,0,1,65,3,1,7,2,11,3,10,3,1,5.0,73,1,82,Data Analyst,Senior,Good,0
+RES_00427,Meera Kumar,meera.kumar56@yahoo.com,+91-80316-74627,37,10,0,1,1,0,0,19,1,4,1,1,0,13,1,2,1.95,30,1,46,Software Engineer,Senior,Poor,1
+RES_00006,Neha Nair,neha.nair13@yahoo.com,+91-98763-40653,9,0,1,1,0,1,149,2,1,6,1,8,5,11,0,3,4.5,63,1,69,Software Engineer,Fresher,Good,0
+RES_00117,Sanjay Singh,sanjay.singh90@yahoo.com,+91-92534-19356,5,2,0,1,0,1,83,2,1,4,1,1,0,7,1,1,2.5,16,0,59,Data Scientist,Entry Level,Poor,0
+RES_00046,Priya Singh,priya.singh39@outlook.com,+91-97023-45247,17,3,1,1,0,0,0,2,1,7,1,6,4,11,3,2,8.5,74,1,80,Data Engineer,Intermediate,Good,0
+RES_00017,Meera Iyer,meera.iyer38@yahoo.com,+91-81762-15610,2,0,0,0,0,0,0,1,1,5,1,1,2,6,1,2,2.0,44,0,48,DevOps Engineer,Fresher,Poor,0
+RES_00463,Vikram Rao,vikram.rao45@outlook.com,+91-86496-72420,37,1,1,1,0,0,0,16,1,3,3,2,0,12,0,2,2.31,34,0,45,Data Scientist,Entry Level,Poor,1
+RES_00358,Karthik Kumar,karthik.kumar35@gmail.com,+91-80173-75958,13,4,1,1,0,1,96,4,1,9,2,12,5,12,3,1,3.25,67,1,89,Data Scientist,Intermediate,Good,0
+RES_00004,Neha Kumar,neha.kumar60@yahoo.com,+91-78595-59484,12,1,1,1,0,0,0,1,1,7,1,11,3,11,1,1,12.0,59,0,72,Data Engineer,Entry Level,Good,0
+RES_00219,Karthik Patel,karthik.patel95@outlook.com,+91-72869-38519,10,2,1,1,0,1,58,1,1,4,1,7,1,7,2,0,10.0,59,0,72,Web Developer,Entry Level,Fair,0
+RES_00406,Karthik Patel,karthik.patel77@company.com,+91-70429-47910,3,0,1,0,1,1,65,0,1,3,4,3,2,5,0,2,3.0,20,0,33,Web Developer,Fresher,Poor,0
+RES_00061,Priya Mehta,priya.mehta11@yahoo.com,+91-78619-36218,12,2,1,1,0,1,148,3,1,7,1,8,6,12,1,2,4.0,73,0,82,Data Scientist,Entry Level,Good,0
+RES_00111,Meera Sharma,meera.sharma72@company.com,+91-88722-27875,8,1,0,0,0,0,0,2,1,6,1,8,3,6,1,0,4.0,53,0,67,UI/UX Designer,Entry Level,Fair,0
+RES_00319,Vikram Kumar,vikram.kumar99@gmail.com,+91-72855-51922,10,2,0,1,0,1,46,1,1,7,1,8,1,9,1,1,10.0,37,1,67,Software Engineer,Entry Level,Fair,0
+RES_00429,Divya Desai,divya.desai11@company.com,+91-86226-60141,26,2,1,1,1,1,127,17,1,9,1,10,3,20,0,1,1.53,37,0,59,UI/UX Designer,Entry Level,Good,1
+RES_00030,Neha Kapoor,neha.kapoor57@company.com,+91-72293-62920,8,7,0,1,0,1,31,2,1,5,1,2,2,4,5,1,4.0,15,0,74,UI/UX Designer,Senior,Poor,0
+RES_00438,Divya Kulkarni,divya.kulkarni75@yahoo.com,+91-70314-84068,38,3,1,1,0,0,0,19,1,4,1,3,0,19,1,2,2.0,10,1,46,Software Engineer,Intermediate,Fair,1
+RES_00472,Rohan Patel,rohan.patel63@gmail.com,+91-91800-80451,43,8,1,0,0,1,55,21,1,4,4,2,0,14,2,1,2.05,33,1,47,Software Engineer,Senior,Poor,1
+RES_00027,Meera Gupta,meera.gupta35@outlook.com,+91-93800-29734,20,9,1,1,0,1,143,4,1,8,2,9,5,11,2,3,5.0,52,1,94,Data Engineer,Senior,Good,0
+RES_00008,Amit Sharma,amit.sharma44@gmail.com,+91-78132-87025,16,3,1,1,1,1,116,3,1,8,1,11,7,9,2,1,5.33,69,1,89,Web Developer,Intermediate,Good,0
+RES_00454,Amit Nair,amit.nair7@gmail.com,+91-74689-20782,59,15,1,1,0,0,0,25,1,4,3,3,0,22,2,2,2.36,15,1,38,Software Engineer,Expert,Poor,1
+RES_00109,Karthik Patel,karthik.patel98@gmail.com,+91-88982-93756,9,0,1,1,0,1,125,2,0,8,1,12,6,12,1,3,4.5,67,1,70,Data Scientist,Fresher,Good,0
+RES_00038,Amit Patel,amit.patel95@outlook.com,+91-95382-15684,14,4,1,0,0,1,149,3,1,6,2,12,5,8,3,2,4.67,58,0,84,Mobile Developer,Intermediate,Good,0
+RES_00158,Arjun Singh,arjun.singh37@company.com,+91-97272-22567,23,12,1,0,1,1,116,9,1,10,3,11,12,10,2,2,2.56,88,1,93,Mobile Developer,Expert,Excellent,0
+RES_00490,Aditya Patel,aditya.patel30@company.com,+91-93428-50334,35,2,1,0,1,1,52,19,1,2,3,2,0,16,1,1,1.84,30,0,44,Software Engineer,Entry Level,Poor,1
+RES_00119,Amit Mehta,amit.mehta52@gmail.com,+91-88573-56029,3,0,1,1,0,1,49,0,1,5,1,7,4,7,2,0,3.0,33,1,59,Mobile Developer,Fresher,Fair,0
+RES_00115,Anjali Mehta,anjali.mehta21@company.com,+91-79032-86868,16,4,1,1,0,1,197,5,1,10,2,16,8,13,2,5,3.2,61,1,90,Data Engineer,Intermediate,Excellent,0
+RES_00176,Anjali Gupta,anjali.gupta97@gmail.com,+91-89625-63244,14,8,1,1,1,1,112,5,1,6,2,6,3,11,2,1,2.8,67,1,87,Software Engineer,Senior,Good,0
+RES_00374,Arjun Kumar,arjun.kumar59@gmail.com,+91-71164-10488,11,0,1,0,1,1,209,3,1,9,1,15,10,10,2,0,3.67,91,0,86,Mobile Developer,Fresher,Excellent,0
+RES_00182,Priya Kulkarni,priya.kulkarni18@outlook.com,+91-97848-18564,12,7,1,1,1,1,99,4,1,7,2,9,6,11,2,2,3.0,55,1,88,Software Engineer,Senior,Good,0
+RES_00145,Meera Rao,meera.rao87@gmail.com,+91-91311-17274,9,2,1,0,0,1,71,1,0,6,1,6,4,9,1,2,9.0,37,1,62,Software Engineer,Entry Level,Fair,0
+RES_00370,Anjali Gupta,anjali.gupta87@yahoo.com,+91-75516-20572,5,1,0,0,1,0,0,1,1,7,1,4,1,7,1,0,5.0,30,0,55,Web Developer,Entry Level,Fair,0
+RES_00391,Sneha Singh,sneha.singh66@outlook.com,+91-84275-36456,8,0,1,0,0,1,153,1,1,8,1,12,7,10,0,0,8.0,74,1,65,Mobile Developer,Fresher,Excellent,0
+RES_00196,Priya Iyer,priya.iyer31@yahoo.com,+91-73840-85097,6,0,1,1,0,1,67,1,1,9,1,11,5,12,2,3,6.0,48,1,76,Data Scientist,Fresher,Good,0
+RES_00405,Arjun Reddy,arjun.reddy81@outlook.com,+91-93435-31174,5,2,0,1,0,1,82,2,1,4,4,2,2,7,1,2,2.5,33,0,51,Software Engineer,Entry Level,Poor,0
+RES_00276,Rohan Joshi,rohan.joshi2@outlook.com,+91-71654-84069,17,7,1,1,1,1,108,4,1,8,2,20,12,12,3,2,4.25,84,1,89,DevOps Engineer,Senior,Excellent,0
+RES_00455,Rohan Joshi,rohan.joshi91@gmail.com,+91-88015-93175,48,7,1,0,0,0,0,18,1,4,2,7,0,23,4,0,2.67,28,0,51,Software Engineer,Senior,Fair,1
+RES_00142,Arjun Shah,arjun.shah50@gmail.com,+91-87143-25702,12,2,1,1,1,1,203,3,0,8,1,20,8,14,1,4,4.0,72,1,77,Software Engineer,Entry Level,Excellent,0
+RES_00366,Arjun Sharma,arjun.sharma77@yahoo.com,+91-87813-66081,10,0,0,0,1,1,227,3,1,8,1,20,10,11,2,1,3.33,93,1,82,Web Developer,Fresher,Excellent,0
+RES_00068,Sneha Sharma,sneha.sharma84@gmail.com,+91-79597-98287,15,4,1,0,0,1,247,4,1,9,2,18,9,12,3,2,3.75,66,1,90,Data Analyst,Intermediate,Excellent,0
+RES_00211,Amit Joshi,amit.joshi65@gmail.com,+91-89317-76344,2,0,1,0,1,1,56,0,1,3,3,1,1,4,0,1,2.0,41,1,35,UI/UX Designer,Fresher,Poor,0
+RES_00169,Sneha Mehta,sneha.mehta26@outlook.com,+91-76601-92668,8,3,1,0,0,0,0,1,0,2,3,4,1,7,2,1,8.0,28,1,61,Data Scientist,Intermediate,Poor,0
+RES_00494,Sneha Singh,sneha.singh66@yahoo.com,+91-70085-13485,40,9,0,0,1,1,51,18,1,7,2,6,0,13,4,1,2.22,29,0,68,Web Developer,Senior,Fair,1
+RES_00376,Sneha Nair,sneha.nair83@company.com,+91-73168-50901,7,2,1,1,1,1,67,3,1,7,1,7,3,9,2,1,2.33,65,1,76,Web Developer,Entry Level,Good,0
+RES_00401,Riya Sharma,riya.sharma17@company.com,+91-83382-66948,11,0,1,0,0,1,168,1,1,9,1,12,6,13,2,1,11.0,65,1,80,Data Engineer,Fresher,Excellent,0
+RES_00273,Divya Singh,divya.singh31@company.com,+91-84943-37490,7,1,1,0,0,0,0,1,0,7,1,5,3,6,1,1,7.0,60,1,48,UI/UX Designer,Entry Level,Fair,0
+RES_00110,Riya Sharma,riya.sharma72@company.com,+91-98638-19180,16,5,1,1,0,1,118,4,1,8,2,7,7,12,2,2,4.0,62,1,88,Data Scientist,Intermediate,Good,0
+RES_00249,Arjun Rao,arjun.rao44@gmail.com,+91-73258-59028,12,5,1,1,0,1,228,6,1,8,2,16,9,9,3,5,2.0,99,1,94,UI/UX Designer,Intermediate,Excellent,0
+RES_00146,Vikram Shah,vikram.shah9@outlook.com,+91-75923-43187,16,4,1,1,0,1,157,4,1,9,2,16,6,14,3,3,4.0,76,1,92,Software Engineer,Intermediate,Excellent,0
+RES_00093,Rohan Reddy,rohan.reddy90@gmail.com,+91-75041-36939,3,0,1,0,0,1,39,0,0,4,1,8,4,9,0,1,3.0,38,1,38,Software Engineer,Fresher,Fair,0
+RES_00153,Karthik Gupta,karthik.gupta35@yahoo.com,+91-96316-46739,17,6,1,0,1,1,101,6,1,10,2,18,11,14,2,5,2.83,85,1,94,Software Engineer,Senior,Excellent,0
+RES_00368,Neha Rao,neha.rao8@outlook.com,+91-70953-55731,13,1,1,0,1,1,247,2,1,9,1,19,8,9,1,2,6.5,79,1,80,UI/UX Designer,Entry Level,Excellent,0
+RES_00468,Karthik Shah,karthik.shah39@company.com,+91-87591-64484,44,4,1,0,0,0,0,20,0,2,3,1,0,10,1,0,2.2,36,0,45,Web Developer,Intermediate,Poor,1
+RES_00084,Rahul Kapoor,rahul.kapoor55@company.com,+91-78761-75662,10,2,1,1,0,1,157,2,1,8,1,15,10,10,2,5,5.0,76,1,82,Mobile Developer,Entry Level,Excellent,0
+RES_00246,Sneha Reddy,sneha.reddy50@company.com,+91-84316-79800,5,1,0,0,0,1,56,1,1,6,1,7,2,7,2,1,5.0,59,1,60,Mobile Developer,Entry Level,Fair,0
+RES_00166,Divya Shah,divya.shah1@outlook.com,+91-86174-44339,10,1,1,0,1,0,0,3,1,10,1,20,7,14,1,2,3.33,90,1,72,Software Engineer,Entry Level,Excellent,0
+RES_00164,Rohan Kulkarni,rohan.kulkarni3@yahoo.com,+91-86764-29795,6,0,0,1,0,0,0,0,1,2,4,2,2,6,0,1,6.0,30,0,27,Data Analyst,Fresher,Poor,0
+RES_00200,Aditya Sharma,aditya.sharma11@company.com,+91-95354-61364,12,0,1,1,0,1,232,1,1,8,1,13,5,13,0,0,12.0,97,1,67,Data Engineer,Fresher,Excellent,0
+RES_00229,Sneha Kumar,sneha.kumar60@gmail.com,+91-96464-67307,15,4,0,1,0,1,149,5,1,8,2,16,10,12,2,4,3.0,94,1,92,DevOps Engineer,Intermediate,Excellent,0
+RES_00075,Divya Patel,divya.patel47@outlook.com,+91-97825-78743,10,5,1,0,0,0,0,3,1,5,2,8,1,9,3,0,3.33,51,0,72,Data Engineer,Intermediate,Fair,0
+RES_00479,Rahul Desai,rahul.desai8@gmail.com,+91-94630-12013,37,3,1,0,0,1,45,19,1,6,1,3,0,18,1,1,1.95,31,0,58,Data Scientist,Intermediate,Fair,1
+RES_00359,Sanjay Singh,sanjay.singh20@yahoo.com,+91-74632-66266,9,4,0,1,0,0,0,1,0,2,1,3,0,6,2,1,9.0,39,1,57,DevOps Engineer,Intermediate,Poor,0
+RES_00251,Rahul Joshi,rahul.joshi79@yahoo.com,+91-75915-53860,11,3,1,1,1,1,134,4,1,9,1,12,4,11,3,2,2.75,52,1,90,Data Engineer,Intermediate,Good,0
+RES_00120,Anjali Rao,anjali.rao93@company.com,+91-97724-22611,13,4,1,0,1,1,73,5,1,6,2,11,5,7,3,1,2.6,75,1,82,UI/UX Designer,Intermediate,Good,0
+RES_00311,Riya Gupta,riya.gupta91@yahoo.com,+91-92627-80807,15,10,0,0,0,1,90,4,1,6,3,5,2,6,5,0,3.75,50,1,84,UI/UX Designer,Senior,Fair,0
+RES_00300,Rohan Sharma,rohan.sharma20@gmail.com,+91-83127-21809,10,1,1,1,1,1,113,2,1,9,1,8,5,11,1,1,5.0,61,0,81,Software Engineer,Entry Level,Good,0
+RES_00256,Anjali Nair,anjali.nair81@company.com,+91-80503-45577,8,0,1,0,0,1,64,2,1,6,1,8,3,10,0,3,4.0,51,1,63,Data Analyst,Fresher,Good,0
+RES_00355,Vikram Sharma,vikram.sharma47@yahoo.com,+91-92680-73688,10,8,0,1,1,1,37,3,1,6,2,7,4,9,5,0,3.33,42,1,82,Software Engineer,Senior,Fair,0
+RES_00400,Arjun Shah,arjun.shah16@yahoo.com,+91-77683-96433,3,0,1,0,1,1,76,1,1,6,1,7,4,8,0,1,3.0,36,1,44,DevOps Engineer,Fresher,Fair,0
+RES_00226,Sneha Gupta,sneha.gupta91@yahoo.com,+91-87743-45632,7,1,1,0,0,1,96,2,1,6,1,10,5,7,1,2,3.5,49,1,69,UI/UX Designer,Entry Level,Good,0
+RES_00354,Priya Reddy,priya.reddy52@company.com,+91-84971-68232,21,10,0,0,1,1,119,8,0,10,2,15,12,12,4,5,2.62,92,0,91,Data Analyst,Senior,Excellent,0
+RES_00235,Riya Kapoor,riya.kapoor99@outlook.com,+91-80266-59380,9,10,1,0,1,1,61,4,1,4,3,0,2,5,2,0,2.25,37,1,69,Mobile Developer,Senior,Poor,0
+RES_00383,Pooja Kulkarni,pooja.kulkarni45@gmail.com,+91-80211-86398,6,4,1,0,0,0,0,1,1,3,3,4,0,6,3,0,6.0,34,1,57,Data Analyst,Intermediate,Poor,0
+RES_00275,Pooja Singh,pooja.singh83@gmail.com,+91-83491-43450,9,3,0,0,0,0,0,3,1,6,1,4,2,9,3,2,3.0,51,0,67,Software Engineer,Intermediate,Fair,0
+RES_00037,Karthik Kulkarni,karthik.kulkarni82@outlook.com,+91-97051-33614,13,4,0,0,1,0,0,4,0,4,2,6,1,9,2,2,3.25,39,0,70,Software Engineer,Intermediate,Fair,0
+RES_00197,Arjun Gupta,arjun.gupta86@outlook.com,+91-74148-38497,16,4,1,1,1,1,108,4,1,10,2,16,12,10,3,2,4.0,79,1,96,Mobile Developer,Intermediate,Excellent,0
+RES_00140,Amit Desai,amit.desai21@gmail.com,+91-94756-65902,7,0,1,1,0,1,65,0,1,9,1,12,5,8,0,3,7.0,59,1,53,Mobile Developer,Fresher,Good,0
+RES_00365,Priya Mehta,priya.mehta50@gmail.com,+91-88338-34875,13,5,1,1,0,1,239,5,1,10,2,19,11,10,3,4,2.6,99,0,90,Mobile Developer,Intermediate,Excellent,0
+RES_00245,Sanjay Singh,sanjay.singh77@outlook.com,+91-96789-68726,17,8,1,1,0,1,142,3,1,9,2,12,4,11,3,3,5.67,45,0,90,Data Engineer,Senior,Good,0
+RES_00440,Vikram Shah,vikram.shah57@company.com,+91-99014-18712,44,4,1,0,0,1,150,21,1,9,2,10,0,16,0,3,2.1,33,1,44,UI/UX Designer,Intermediate,Good,1
+RES_00287,Sanjay Iyer,sanjay.iyer8@company.com,+91-97451-81835,9,1,0,1,0,0,0,2,0,5,1,6,3,9,2,1,4.5,50,0,64,Software Engineer,Entry Level,Fair,0
+RES_00060,Divya Patel,divya.patel65@outlook.com,+91-73002-61582,4,0,0,0,0,0,0,0,1,4,1,5,4,7,0,2,4.0,56,0,33,Mobile Developer,Fresher,Fair,0
+RES_00112,Meera Kapoor,meera.kapoor53@yahoo.com,+91-91408-49751,12,6,1,0,0,0,0,2,1,6,2,3,3,7,5,1,6.0,45,1,75,Mobile Developer,Senior,Fair,0
+RES_00090,Rahul Mehta,rahul.mehta41@company.com,+91-79803-18141,11,1,0,0,0,0,0,3,1,9,1,9,7,7,2,2,3.67,63,0,74,UI/UX Designer,Entry Level,Good,0
+RES_00437,Arjun Nair,arjun.nair7@company.com,+91-72148-76057,50,4,1,0,0,0,0,15,0,3,4,4,0,18,2,0,3.33,36,0,49,Mobile Developer,Intermediate,Poor,1
+RES_00007,Priya Kulkarni,priya.kulkarni23@gmail.com,+91-76556-62104,13,4,1,1,1,1,221,6,1,8,2,18,12,14,3,2,2.17,90,1,93,Software Engineer,Intermediate,Excellent,0
+RES_00361,Karthik Rao,karthik.rao1@gmail.com,+91-70828-62762,13,1,1,0,0,1,249,4,1,8,1,14,9,12,2,1,3.25,87,1,87,DevOps Engineer,Entry Level,Excellent,0
+RES_00347,Amit Joshi,amit.joshi98@company.com,+91-87786-94611,10,2,1,0,1,1,149,1,1,7,1,7,6,9,2,3,10.0,60,1,77,Web Developer,Entry Level,Good,0
+RES_00339,Anjali Desai,anjali.desai92@company.com,+91-71760-49455,4,0,1,0,0,0,0,0,1,5,3,3,1,5,1,1,4.0,24,0,43,Web Developer,Fresher,Poor,0
+RES_00159,Riya Joshi,riya.joshi55@yahoo.com,+91-97089-25331,13,3,1,1,0,1,241,4,1,9,1,12,10,12,3,2,3.25,74,0,90,DevOps Engineer,Intermediate,Excellent,0
+RES_00151,Anjali Joshi,anjali.joshi7@outlook.com,+91-84353-14407,4,0,1,1,0,0,0,0,1,2,1,4,2,6,0,1,4.0,39,0,36,Data Engineer,Fresher,Poor,0
+RES_00178,Riya Gupta,riya.gupta85@gmail.com,+91-80282-36176,13,5,0,0,0,1,77,2,1,6,2,4,1,10,3,2,6.5,37,1,74,Data Scientist,Intermediate,Fair,0
+RES_00394,Karthik Shah,karthik.shah14@gmail.com,+91-87876-16084,7,6,0,0,1,0,0,4,1,4,3,0,0,6,2,1,1.75,34,0,58,DevOps Engineer,Senior,Poor,0
+RES_00185,Pooja Reddy,pooja.reddy41@gmail.com,+91-91566-56685,7,0,1,1,1,1,223,1,1,8,1,12,10,12,0,2,7.0,74,1,62,Data Analyst,Fresher,Excellent,0
+RES_00450,Sanjay Shah,sanjay.shah26@company.com,+91-91592-20138,31,1,1,0,0,0,0,16,1,9,1,6,0,21,0,1,1.94,40,1,58,Web Developer,Entry Level,Good,1
+RES_00011,Priya Nair,priya.nair26@company.com,+91-74199-47351,12,2,1,1,1,1,242,3,1,9,1,13,7,13,2,5,4.0,86,1,92,Data Engineer,Entry Level,Excellent,0
+RES_00381,Sanjay Sharma,sanjay.sharma84@company.com,+91-78254-89539,8,3,1,1,1,0,0,2,1,2,1,2,1,6,2,1,4.0,28,0,63,Data Analyst,Intermediate,Poor,0
+RES_00104,Amit Kulkarni,amit.kulkarni36@gmail.com,+91-88082-34801,17,3,1,1,1,0,0,5,1,9,1,7,3,7,3,2,3.4,60,0,79,UI/UX Designer,Intermediate,Good,0
+RES_00082,Sneha Rao,sneha.rao87@gmail.com,+91-71210-64731,14,3,1,1,0,1,61,4,1,7,1,6,4,12,2,1,3.5,45,1,88,Data Scientist,Intermediate,Good,0
+RES_00039,Priya Shah,priya.shah79@gmail.com,+91-91688-92225,6,2,1,0,0,1,118,1,1,7,1,8,4,11,1,1,6.0,48,1,66,Data Engineer,Entry Level,Good,0
+RES_00315,Sanjay Mehta,sanjay.mehta16@company.com,+91-77786-97429,15,3,1,0,0,0,0,3,1,6,1,8,6,10,3,2,5.0,52,1,81,Data Analyst,Intermediate,Good,0
+RES_00168,Amit Mehta,amit.mehta85@yahoo.com,+91-94310-64572,14,1,1,0,0,1,150,4,1,10,1,17,8,12,1,0,3.5,60,1,86,Data Analyst,Entry Level,Excellent,0
+RES_00470,Aditya Mehta,aditya.mehta60@company.com,+91-96694-67290,36,6,1,1,1,1,71,21,1,7,2,11,0,24,0,1,1.71,30,0,54,DevOps Engineer,Senior,Good,1
+RES_00297,Divya Rao,divya.rao23@yahoo.com,+91-94369-29897,11,4,1,1,1,0,0,4,1,9,2,6,6,7,3,1,2.75,48,1,82,UI/UX Designer,Intermediate,Good,0
+RES_00475,Karthik Patel,karthik.patel26@company.com,+91-76495-24795,53,8,1,0,0,1,134,21,1,6,2,11,1,25,2,2,2.52,16,1,64,DevOps Engineer,Senior,Good,1
+RES_00199,Anjali Sharma,anjali.sharma64@gmail.com,+91-99559-47591,9,1,1,1,0,1,136,4,1,10,1,19,10,13,1,2,2.25,85,1,83,Data Engineer,Entry Level,Excellent,0
+RES_00298,Rahul Rao,rahul.rao20@outlook.com,+91-78296-49508,7,2,1,0,0,0,0,1,0,4,1,7,2,8,2,1,7.0,50,0,55,DevOps Engineer,Entry Level,Fair,0
+RES_00417,Sneha Rao,sneha.rao58@gmail.com,+91-75603-94014,19,4,1,1,1,1,172,3,1,9,2,11,9,13,3,4,6.33,87,0,96,Data Engineer,Intermediate,Excellent,0
+RES_00147,Karthik Kumar,karthik.kumar57@yahoo.com,+91-92786-68930,8,5,0,0,1,0,0,2,0,5,1,0,1,5,3,0,4.0,34,1,59,Web Developer,Intermediate,Poor,0
+RES_00393,Pooja Patel,pooja.patel5@yahoo.com,+91-81193-42623,7,2,0,1,0,1,96,2,1,6,1,12,6,8,1,3,3.5,53,1,66,Mobile Developer,Entry Level,Good,0
+RES_00148,Priya Rao,priya.rao94@yahoo.com,+91-80728-64043,12,1,1,0,0,1,76,2,1,9,1,9,6,12,2,2,6.0,53,1,82,Data Scientist,Entry Level,Good,0
+RES_00448,Neha Joshi,neha.joshi72@gmail.com,+91-99081-73794,41,4,1,0,1,0,0,16,1,5,4,2,0,16,0,2,2.56,15,1,31,Data Engineer,Intermediate,Poor,1
+RES_00288,Riya Gupta,riya.gupta18@outlook.com,+91-94040-48331,21,7,1,1,0,1,109,4,1,8,2,9,7,10,4,3,5.25,60,0,100,DevOps Engineer,Senior,Good,0
+RES_00124,Riya Patel,riya.patel69@company.com,+91-90491-88016,14,2,1,1,0,1,117,2,1,10,1,12,12,13,1,4,7.0,72,1,85,Data Engineer,Entry Level,Excellent,0
+RES_00369,Rohan Kulkarni,rohan.kulkarni73@gmail.com,+91-93099-34994,12,4,1,0,0,1,109,2,1,6,2,7,6,10,3,2,6.0,60,1,85,DevOps Engineer,Intermediate,Good,0
+RES_00097,Riya Mehta,riya.mehta82@yahoo.com,+91-76433-45121,12,3,1,0,0,0,0,4,1,6,1,5,3,9,3,0,3.0,46,1,77,Data Engineer,Intermediate,Fair,0
+RES_00144,Meera Gupta,meera.gupta97@gmail.com,+91-86644-37359,19,7,1,1,1,1,150,5,1,8,2,6,6,9,4,1,3.8,61,0,95,Web Developer,Senior,Good,0
+RES_00240,Anjali Gupta,anjali.gupta3@yahoo.com,+91-77587-75824,14,5,0,1,1,1,104,2,1,6,2,10,3,7,2,3,7.0,51,1,81,UI/UX Designer,Intermediate,Good,0
+RES_00443,Anjali Patel,anjali.patel53@yahoo.com,+91-85778-39784,26,1,1,0,1,1,97,15,1,8,1,12,0,16,0,2,1.73,19,0,50,DevOps Engineer,Entry Level,Good,1
+RES_00098,Rohan Nair,rohan.nair34@yahoo.com,+91-90071-83902,16,4,1,1,0,1,188,5,1,8,2,13,5,12,3,3,3.2,85,1,88,Data Analyst,Intermediate,Excellent,0
+RES_00408,Rahul Iyer,rahul.iyer56@yahoo.com,+91-81729-23305,11,8,1,0,0,1,86,2,1,4,1,1,1,6,5,0,5.5,32,1,74,DevOps Engineer,Senior,Poor,0
+RES_00123,Sanjay Kapoor,sanjay.kapoor15@yahoo.com,+91-91684-94264,7,1,0,1,1,0,0,2,1,4,3,1,1,6,2,0,3.5,19,0,58,Data Engineer,Entry Level,Poor,0
+RES_00184,Amit Kumar,amit.kumar28@outlook.com,+91-70505-68698,9,0,1,1,1,1,149,1,1,7,1,7,7,9,0,1,9.0,75,1,59,Web Developer,Fresher,Good,0
+RES_00203,Priya Gupta,priya.gupta61@company.com,+91-72387-16613,21,13,0,0,0,0,0,5,1,4,3,4,4,6,5,0,4.2,35,0,81,UI/UX Designer,Expert,Fair,0
+RES_00247,Anjali Iyer,anjali.iyer93@outlook.com,+91-97688-88415,12,3,0,0,0,1,68,3,1,5,1,6,4,8,2,1,4.0,54,0,81,Data Analyst,Intermediate,Fair,0
+RES_00306,Divya Rao,divya.rao90@gmail.com,+91-73704-36454,15,1,1,1,0,1,216,3,1,8,1,14,6,15,1,0,5.0,82,1,87,Data Scientist,Entry Level,Excellent,0
+RES_00299,Meera Iyer,meera.iyer43@gmail.com,+91-98840-32364,14,4,0,0,1,1,195,4,1,10,2,17,10,12,3,5,3.5,91,0,92,DevOps Engineer,Intermediate,Excellent,0
+RES_00352,Sneha Kulkarni,sneha.kulkarni49@outlook.com,+91-75915-28618,15,3,1,0,1,0,0,3,1,9,1,7,5,7,2,1,5.0,63,1,78,UI/UX Designer,Intermediate,Good,0
+RES_00387,Rohan Singh,rohan.singh54@outlook.com,+91-78525-87293,5,1,0,0,0,1,89,1,1,6,1,3,2,7,2,2,5.0,48,0,59,Mobile Developer,Entry Level,Fair,0
+RES_00396,Aditya Reddy,aditya.reddy70@company.com,+91-86178-82148,6,0,0,0,0,0,0,1,1,2,1,1,1,6,0,0,6.0,21,0,40,Data Analyst,Fresher,Poor,0
+RES_00285,Arjun Singh,arjun.singh47@outlook.com,+91-89801-68968,6,0,1,1,0,0,0,1,1,3,3,4,2,4,0,0,6.0,17,1,39,UI/UX Designer,Fresher,Poor,0
+RES_00126,Sneha Mehta,sneha.mehta59@yahoo.com,+91-71794-83652,11,1,1,1,0,1,141,2,1,8,1,19,10,14,1,2,5.5,68,1,82,Software Engineer,Entry Level,Excellent,0
+RES_00303,Sneha Mehta,sneha.mehta26@outlook.com,+91-75482-71025,12,10,1,0,1,0,0,3,1,3,3,3,1,6,4,1,4.0,39,0,77,DevOps Engineer,Senior,Poor,0
+RES_00224,Rahul Joshi,rahul.joshi88@company.com,+91-90374-69120,4,0,0,0,0,0,0,1,1,7,1,4,2,7,1,2,4.0,42,0,50,Web Developer,Fresher,Fair,0
+RES_00419,Amit Joshi,amit.joshi48@yahoo.com,+91-90337-34902,11,1,1,0,1,1,130,3,1,6,1,9,7,7,1,1,3.67,46,0,81,UI/UX Designer,Entry Level,Good,0
+RES_00220,Arjun Reddy,arjun.reddy81@gmail.com,+91-92989-56991,21,15,1,0,0,1,182,7,1,9,2,20,7,10,2,5,3.0,94,1,96,Mobile Developer,Expert,Excellent,0
+RES_00130,Rohan Gupta,rohan.gupta28@company.com,+91-72157-61437,8,1,1,1,0,0,0,3,1,9,1,9,3,10,1,3,2.67,61,1,73,Data Analyst,Entry Level,Good,0
+RES_00421,Rohan Iyer,rohan.iyer81@yahoo.com,+91-71153-70908,10,13,1,0,1,0,0,3,1,4,1,0,0,6,5,2,3.33,30,0,72,Data Analyst,Expert,Poor,0
+RES_00290,Anjali Desai,anjali.desai37@company.com,+91-85805-19309,21,20,1,0,1,1,43,3,0,5,3,7,4,9,3,1,7.0,32,0,79,Software Engineer,Expert,Fair,0
+RES_00445,Karthik Reddy,karthik.reddy89@company.com,+91-74357-19038,45,1,1,1,1,1,73,9,1,4,1,5,0,15,0,1,5.0,31,1,48,Data Engineer,Entry Level,Fair,1
+RES_00377,Meera Shah,meera.shah15@gmail.com,+91-84558-10631,17,3,1,1,1,1,133,3,1,7,1,7,7,11,2,2,5.67,69,1,89,Software Engineer,Intermediate,Good,0
+RES_00292,Amit Joshi,amit.joshi8@yahoo.com,+91-84004-74627,10,8,1,0,1,0,0,4,1,4,2,6,1,7,3,0,2.5,54,1,72,Web Developer,Senior,Fair,0
+RES_00356,Sneha Iyer,sneha.iyer69@company.com,+91-94716-61570,7,1,1,1,1,0,0,2,1,9,1,9,4,9,2,2,3.5,69,1,73,Web Developer,Entry Level,Good,0
+RES_00295,Karthik Desai,karthik.desai32@company.com,+91-71343-10848,8,4,0,1,0,0,0,2,1,5,2,8,4,10,2,2,4.0,31,1,75,Data Scientist,Intermediate,Fair,0
+RES_00397,Vikram Mehta,vikram.mehta46@outlook.com,+91-83583-90062,9,0,1,1,1,1,150,0,1,8,1,9,3,7,0,1,9.0,50,1,61,UI/UX Designer,Fresher,Good,0
+RES_00341,Pooja Sharma,pooja.sharma4@yahoo.com,+91-79164-23631,8,2,1,1,1,1,225,4,1,8,1,13,9,15,1,4,2.0,64,1,84,Data Scientist,Entry Level,Excellent,0
+RES_00113,Arjun Singh,arjun.singh37@outlook.com,+91-94894-36031,9,5,1,1,0,0,0,2,0,4,2,5,2,6,3,0,4.5,52,0,70,UI/UX Designer,Intermediate,Fair,0
+RES_00180,Meera Kapoor,meera.kapoor48@yahoo.com,+91-90404-65597,15,4,1,1,1,1,241,5,1,10,2,17,7,11,2,3,3.0,61,1,94,Web Developer,Intermediate,Excellent,0
+RES_00308,Sneha Rao,sneha.rao48@gmail.com,+91-71260-95922,6,1,1,1,1,1,64,1,1,7,1,7,3,11,2,2,6.0,57,1,65,Data Engineer,Entry Level,Good,0
+RES_00433,Sneha Nair,sneha.nair50@company.com,+91-89803-28309,38,3,1,1,0,1,69,18,1,5,1,7,0,23,2,0,2.11,32,0,66,Data Analyst,Intermediate,Fair,1
+RES_00488,Rahul Gupta,rahul.gupta43@yahoo.com,+91-93475-15907,32,4,0,0,0,0,0,13,1,5,2,3,1,18,1,1,2.46,22,1,31,Data Analyst,Intermediate,Fair,1
+RES_00482,Sanjay Rao,sanjay.rao58@gmail.com,+91-92120-75845,43,5,0,1,0,0,0,19,1,6,2,7,0,24,0,1,2.26,25,0,49,Data Engineer,Intermediate,Fair,1
+RES_00423,Rohan Rao,rohan.rao3@company.com,+91-87296-18465,6,0,1,0,1,1,132,2,1,9,1,7,3,7,1,1,3.0,51,1,66,UI/UX Designer,Fresher,Good,0
+RES_00234,Amit Gupta,amit.gupta57@outlook.com,+91-99585-98400,12,0,1,0,0,0,0,2,1,9,1,18,8,12,0,0,6.0,76,1,65,Data Analyst,Fresher,Excellent,0
+RES_00312,Anjali Singh,anjali.singh37@outlook.com,+91-81299-48679,3,0,0,0,1,1,44,1,1,7,1,3,1,8,0,1,3.0,44,0,43,DevOps Engineer,Fresher,Fair,0
+RES_00165,Priya Kapoor,priya.kapoor81@company.com,+91-86805-14513,4,0,1,0,0,1,71,2,0,6,1,6,1,6,1,0,2.0,56,0,53,UI/UX Designer,Fresher,Fair,0
+RES_00137,Aditya Nair,aditya.nair65@company.com,+91-99596-42790,10,0,0,0,1,1,134,1,1,8,1,7,7,8,0,3,10.0,46,1,60,Mobile Developer,Fresher,Good,0
+RES_00198,Rohan Patel,rohan.patel24@gmail.com,+91-97410-57523,17,6,1,0,0,0,0,5,1,7,2,5,2,6,2,1,3.4,51,0,76,UI/UX Designer,Senior,Fair,0
+RES_00259,Neha Kulkarni,neha.kulkarni3@yahoo.com,+91-86296-65668,6,3,1,0,0,1,47,1,0,4,3,4,2,7,3,2,6.0,18,1,59,Data Scientist,Intermediate,Poor,0
+RES_00233,Arjun Kumar,arjun.kumar92@gmail.com,+91-86352-16536,12,5,1,1,0,0,0,2,1,7,2,10,3,12,2,1,6.0,63,1,75,Data Scientist,Intermediate,Good,0
+RES_00116,Amit Kapoor,amit.kapoor5@gmail.com,+91-74430-48577,10,4,1,1,1,1,74,5,1,6,2,6,5,12,3,3,2.0,47,0,82,Data Scientist,Intermediate,Good,0
+RES_00121,Priya Reddy,priya.reddy26@company.com,+91-99382-19749,12,3,1,1,0,1,99,4,1,7,1,8,3,10,3,3,3.0,70,1,86,Data Analyst,Intermediate,Good,0
+RES_00350,Neha Singh,neha.singh19@outlook.com,+91-86099-67461,5,0,1,0,1,0,0,0,1,2,1,0,0,4,2,1,5.0,18,0,54,UI/UX Designer,Fresher,Poor,0
+RES_00225,Karthik Kapoor,karthik.kapoor89@company.com,+91-92618-43796,7,2,1,0,1,0,0,2,1,4,1,6,3,8,2,0,3.5,38,1,59,DevOps Engineer,Entry Level,Fair,0
+RES_00403,Aditya Iyer,aditya.iyer58@yahoo.com,+91-80870-78341,15,8,1,1,1,1,102,4,1,7,2,8,7,8,5,1,3.75,58,1,98,Mobile Developer,Senior,Good,0
+RES_00398,Meera Gupta,meera.gupta44@outlook.com,+91-74510-69515,9,2,1,1,0,0,0,1,1,8,1,6,7,10,1,1,9.0,64,1,67,Data Analyst,Entry Level,Good,0
+RES_00128,Divya Kulkarni,divya.kulkarni27@yahoo.com,+91-96746-86443,7,0,0,1,0,0,0,2,0,7,1,3,3,6,0,2,3.5,50,1,41,UI/UX Designer,Fresher,Fair,0
+RES_00286,Meera Shah,meera.shah44@yahoo.com,+91-99097-84206,10,5,1,1,0,0,0,4,1,5,2,5,1,8,2,1,2.5,30,0,72,Data Analyst,Intermediate,Fair,0
+RES_00412,Karthik Kumar,karthik.kumar96@outlook.com,+91-80643-32120,10,1,1,1,1,1,87,2,1,8,1,11,4,11,2,3,5.0,63,1,80,Software Engineer,Entry Level,Good,0
+RES_00108,Vikram Patel,vikram.patel83@company.com,+91-79120-24802,9,4,0,0,0,0,0,2,1,7,2,7,3,9,2,2,4.5,58,0,69,Data Engineer,Intermediate,Fair,0
+RES_00371,Sneha Gupta,sneha.gupta48@yahoo.com,+91-78188-74326,12,5,1,1,0,1,146,6,1,8,2,15,11,14,3,5,2.0,95,1,94,Software Engineer,Intermediate,Excellent,0
+RES_00326,Meera Reddy,meera.reddy54@gmail.com,+91-73360-77032,3,0,0,0,0,0,0,2,1,7,1,4,3,8,0,0,1.5,40,1,44,DevOps Engineer,Fresher,Fair,0
+RES_00134,Vikram Reddy,vikram.reddy70@gmail.com,+91-98057-10279,12,3,1,1,0,1,161,5,1,9,1,10,5,15,3,4,2.4,91,1,93,Data Scientist,Intermediate,Excellent,0
+RES_00453,Pooja Kumar,pooja.kumar95@yahoo.com,+91-78616-60573,50,16,1,0,0,0,0,23,1,3,1,3,0,11,1,0,2.17,35,0,48,UI/UX Designer,Expert,Poor,1
+RES_00045,Rohan Sharma,rohan.sharma63@outlook.com,+91-99034-96902,15,7,1,1,0,1,218,6,1,8,2,20,11,15,4,4,2.5,90,0,94,Data Scientist,Senior,Excellent,0
+RES_00461,Rohan Mehta,rohan.mehta47@yahoo.com,+91-94099-90838,46,13,1,0,1,1,72,15,1,7,2,6,0,17,1,1,3.07,19,0,47,Data Analyst,Expert,Fair,1
+RES_00066,Karthik Kapoor,karthik.kapoor68@gmail.com,+91-85882-64524,12,2,1,0,1,1,163,2,1,9,1,10,12,11,1,3,6.0,82,1,83,Web Developer,Entry Level,Excellent,0
+RES_00284,Arjun Shah,arjun.shah55@company.com,+91-98407-60328,10,1,1,1,0,1,212,4,1,9,1,15,7,13,1,1,2.5,70,1,82,Data Engineer,Entry Level,Excellent,0
+RES_00086,Amit Nair,amit.nair14@company.com,+91-91244-25810,3,0,1,0,0,0,0,1,1,4,1,1,2,6,0,0,3.0,36,1,39,Data Analyst,Fresher,Poor,0
+RES_00243,Pooja Gupta,pooja.gupta40@outlook.com,+91-86098-87939,5,1,1,1,1,0,0,2,1,5,1,8,2,7,1,0,2.5,53,0,62,Mobile Developer,Entry Level,Fair,0
+RES_00187,Karthik Kulkarni,karthik.kulkarni9@gmail.com,+91-73856-58506,7,0,1,0,1,1,85,1,1,8,1,10,6,10,2,2,7.0,49,1,73,Data Analyst,Fresher,Good,0
+RES_00384,Priya Nair,priya.nair33@yahoo.com,+91-99320-78217,16,10,1,0,0,1,143,5,1,8,2,17,5,12,4,5,3.2,77,1,91,Data Analyst,Senior,Excellent,0
+RES_00160,Anjali Rao,anjali.rao94@gmail.com,+91-71083-23137,8,1,1,1,0,1,136,1,1,8,1,12,7,11,2,2,8.0,46,1,82,Software Engineer,Entry Level,Good,0
+RES_00013,Neha Desai,neha.desai11@outlook.com,+91-81584-39023,11,4,1,0,0,1,47,4,1,6,2,7,2,7,3,0,2.75,47,0,77,Mobile Developer,Intermediate,Fair,0
+RES_00036,Meera Gupta,meera.gupta55@gmail.com,+91-74177-96388,6,1,0,0,0,1,52,2,1,4,1,3,2,7,1,1,3.0,51,1,57,Mobile Developer,Entry Level,Fair,0
+RES_00029,Rahul Kumar,rahul.kumar25@yahoo.com,+91-97460-88725,20,7,1,0,0,1,222,6,1,9,2,13,6,10,5,5,3.33,64,1,97,Mobile Developer,Senior,Excellent,0
+RES_00171,Amit Kapoor,amit.kapoor51@company.com,+91-86305-67751,13,1,1,0,0,1,229,3,1,10,1,10,9,14,1,2,4.33,76,1,83,Software Engineer,Entry Level,Excellent,0
+RES_00143,Sneha Iyer,sneha.iyer6@outlook.com,+91-93116-79056,17,5,1,0,1,1,150,3,1,7,2,8,5,10,2,1,5.67,64,1,89,DevOps Engineer,Intermediate,Good,0
+RES_00399,Amit Iyer,amit.iyer93@outlook.com,+91-70407-73137,8,0,1,0,0,1,57,2,1,4,1,7,1,6,0,2,4.0,48,1,59,UI/UX Designer,Fresher,Fair,0
+RES_00343,Amit Kapoor,amit.kapoor44@gmail.com,+91-99586-72933,12,8,1,1,0,1,88,4,1,6,2,11,5,11,5,1,3.0,64,0,93,Data Engineer,Senior,Good,0
+RES_00222,Karthik Patel,karthik.patel94@company.com,+91-81098-23082,7,1,1,0,1,1,119,3,1,9,1,6,6,9,1,2,2.33,71,1,73,Web Developer,Entry Level,Good,0
+RES_00096,Karthik Gupta,karthik.gupta84@company.com,+91-75038-32080,7,8,0,0,0,0,0,2,1,5,1,0,0,7,2,0,3.5,23,1,61,Software Engineer,Senior,Poor,0
+RES_00052,Vikram Kapoor,vikram.kapoor62@outlook.com,+91-87692-62719,14,4,1,1,1,1,154,4,1,8,2,10,9,15,2,2,3.5,89,1,88,Data Scientist,Intermediate,Excellent,0
+RES_00241,Rohan Nair,rohan.nair49@yahoo.com,+91-90147-54563,5,0,1,0,0,0,0,0,1,9,1,7,4,10,1,2,5.0,57,0,56,DevOps Engineer,Fresher,Good,0
+RES_00485,Karthik Desai,karthik.desai97@company.com,+91-83053-91067,41,14,1,0,0,0,0,24,1,4,2,6,0,22,0,2,1.71,19,1,41,Mobile Developer,Expert,Fair,1
+RES_00379,Sanjay Patel,sanjay.patel79@company.com,+91-74963-85327,8,0,1,0,0,1,92,2,1,4,1,6,1,10,0,0,4.0,53,1,54,Data Scientist,Fresher,Fair,0
+RES_00179,Riya Singh,riya.singh11@gmail.com,+91-92942-75788,6,2,1,0,1,1,77,1,0,6,1,8,4,8,1,1,6.0,40,1,60,DevOps Engineer,Entry Level,Fair,0
+RES_00042,Sanjay Nair,sanjay.nair89@yahoo.com,+91-97338-40072,9,5,0,0,1,1,74,2,0,6,2,6,4,7,2,2,4.5,60,0,71,Mobile Developer,Intermediate,Fair,0
+RES_00499,Karthik Kulkarni,karthik.kulkarni1@company.com,+91-85821-51698,40,2,1,0,1,0,0,9,0,5,1,2,0,11,1,0,4.44,10,1,39,Mobile Developer,Entry Level,Poor,1
+RES_00422,Anjali Reddy,anjali.reddy71@company.com,+91-82780-67358,11,1,1,0,0,1,198,3,1,9,1,14,9,12,2,1,3.67,89,1,83,DevOps Engineer,Entry Level,Excellent,0
+RES_00207,Neha Shah,neha.shah2@company.com,+91-89179-83351,9,3,0,1,0,0,0,2,1,5,1,6,1,9,3,2,4.5,48,1,68,Software Engineer,Intermediate,Fair,0
+RES_00283,Karthik Rao,karthik.rao97@outlook.com,+91-86197-59290,4,1,1,1,0,0,0,1,1,4,1,2,2,4,2,0,4.0,41,0,54,UI/UX Designer,Entry Level,Poor,0
+RES_00255,Priya Sharma,priya.sharma91@outlook.com,+91-90218-74323,10,4,1,0,0,0,0,3,1,2,1,2,0,5,2,2,3.33,31,0,70,Web Developer,Intermediate,Poor,0
+RES_00413,Meera Reddy,meera.reddy59@outlook.com,+91-88015-41444,15,5,1,1,1,1,199,5,1,9,2,14,6,9,2,3,3.0,64,1,89,UI/UX Designer,Intermediate,Excellent,0
+RES_00005,Vikram Nair,vikram.nair96@gmail.com,+91-80011-54480,15,3,1,0,0,1,170,3,1,9,1,14,12,13,3,4,5.0,97,1,90,Data Engineer,Intermediate,Excellent,0
+RES_00257,Sanjay Sharma,sanjay.sharma57@company.com,+91-91540-13883,8,0,1,0,0,1,57,1,1,5,1,7,3,8,0,2,8.0,36,1,54,DevOps Engineer,Fresher,Fair,0
+RES_00449,Arjun Shah,arjun.shah69@yahoo.com,+91-97769-95526,27,2,1,1,0,0,0,14,1,5,3,4,0,16,0,1,1.93,27,0,37,Software Engineer,Entry Level,Poor,1
+RES_00101,Pooja Kapoor,pooja.kapoor19@gmail.com,+91-97405-30183,21,10,1,0,1,1,130,6,1,8,3,15,9,12,3,3,3.5,76,1,89,Data Analyst,Senior,Excellent,0
+RES_00227,Meera Shah,meera.shah26@company.com,+91-92191-17369,15,7,0,1,0,1,44,3,1,7,2,6,2,10,4,0,5.0,59,1,86,Data Scientist,Senior,Fair,0
+RES_00430,Sanjay Kapoor,sanjay.kapoor6@outlook.com,+91-72907-11654,55,15,1,1,0,1,126,16,1,6,3,12,3,19,0,2,3.44,33,1,53,DevOps Engineer,Expert,Good,1
+RES_00214,Rahul Kapoor,rahul.kapoor44@company.com,+91-80607-29521,14,2,1,0,1,0,0,2,1,8,1,12,5,9,2,3,7.0,72,1,76,UI/UX Designer,Entry Level,Excellent,0
+RES_00172,Rohan Mehta,rohan.mehta70@outlook.com,+91-85861-77360,10,7,1,1,0,1,40,3,1,7,2,7,3,10,4,0,3.33,52,1,81,Data Scientist,Senior,Fair,0
+RES_00099,Rahul Gupta,rahul.gupta33@company.com,+91-98982-58532,4,0,1,0,1,1,110,1,1,6,1,11,6,9,0,2,4.0,72,1,54,Web Developer,Fresher,Good,0
+RES_00293,Rahul Iyer,rahul.iyer59@gmail.com,+91-87335-44665,9,4,1,0,0,0,0,2,1,2,3,4,0,6,3,1,4.5,34,1,62,DevOps Engineer,Intermediate,Poor,0
+RES_00216,Aditya Rao,aditya.rao53@company.com,+91-83302-18053,12,5,1,1,0,1,133,4,1,8,2,7,6,10,2,3,3.0,53,1,91,Data Analyst,Intermediate,Good,0
+RES_00062,Sanjay Shah,sanjay.shah19@gmail.com,+91-96238-80356,8,4,1,0,1,0,0,3,1,3,3,4,0,4,3,2,2.67,30,1,69,UI/UX Designer,Intermediate,Poor,0
+RES_00048,Divya Kumar,divya.kumar88@yahoo.com,+91-70374-95382,6,1,1,1,0,1,71,2,1,6,1,6,6,12,2,1,3.0,70,0,72,Data Scientist,Entry Level,Good,0
+RES_00033,Priya Kulkarni,priya.kulkarni11@yahoo.com,+91-98722-38636,16,7,1,1,0,1,169,4,1,10,2,17,10,15,4,3,4.0,89,1,98,Data Scientist,Senior,Excellent,0
+RES_00268,Meera Gupta,meera.gupta86@outlook.com,+91-94093-87830,12,4,1,0,1,0,0,2,1,8,2,12,5,9,2,3,6.0,48,1,78,Web Developer,Intermediate,Good,0
+RES_00328,Neha Desai,neha.desai24@outlook.com,+91-81229-90851,15,1,1,1,1,1,132,3,1,9,1,20,10,12,1,1,5.0,73,1,87,DevOps Engineer,Entry Level,Excellent,0
+RES_00201,Meera Kulkarni,meera.kulkarni22@yahoo.com,+91-76893-71008,7,0,1,1,0,0,0,1,1,7,1,8,5,11,0,3,7.0,57,1,52,Software Engineer,Fresher,Good,0
+RES_00447,Anjali Sharma,anjali.sharma86@yahoo.com,+91-75002-46599,54,10,1,0,1,0,0,18,1,5,3,3,0,14,1,0,3.0,40,0,37,DevOps Engineer,Senior,Poor,1
+RES_00028,Rahul Patel,rahul.patel58@yahoo.com,+91-88312-14061,20,7,1,0,1,1,104,8,1,9,2,18,12,9,5,5,2.5,60,1,99,UI/UX Designer,Senior,Excellent,0
+RES_00425,Pooja Gupta,pooja.gupta31@yahoo.com,+91-84451-22690,17,10,1,0,0,1,233,6,1,10,3,11,11,15,2,5,2.83,97,1,91,Data Scientist,Senior,Excellent,0
+RES_00231,Aditya Reddy,aditya.reddy50@yahoo.com,+91-80200-28691,9,2,1,1,0,1,145,3,1,9,1,12,3,12,1,2,3.0,53,0,81,Data Scientist,Entry Level,Good,0
+RES_00261,Amit Joshi,amit.joshi85@gmail.com,+91-73931-40209,19,7,1,0,0,1,72,5,1,8,2,6,6,10,2,3,3.8,59,0,91,Data Analyst,Senior,Good,0
+RES_00289,Priya Desai,priya.desai89@company.com,+91-87121-94000,15,2,1,0,1,1,127,3,1,10,1,16,12,10,2,4,5.0,66,1,92,Mobile Developer,Entry Level,Excellent,0
+RES_00163,Rohan Desai,rohan.desai10@gmail.com,+91-90126-32927,10,8,1,1,0,0,0,2,1,5,4,1,0,6,3,2,5.0,30,1,59,Data Engineer,Senior,Poor,0
+RES_00426,Anjali Gupta,anjali.gupta8@outlook.com,+91-98315-25028,47,17,1,0,1,1,70,25,1,2,3,3,0,15,1,1,1.88,13,0,50,UI/UX Designer,Expert,Poor,1
+RES_00139,Sanjay Shah,sanjay.shah97@yahoo.com,+91-73430-79288,11,1,1,0,1,1,135,1,1,8,1,7,4,9,2,2,11.0,68,0,73,Web Developer,Entry Level,Good,0
+RES_00063,Karthik Kumar,karthik.kumar54@yahoo.com,+91-88355-87231,14,6,1,0,1,1,91,3,1,5,2,5,1,9,3,2,4.67,54,0,80,Data Engineer,Senior,Fair,0
+RES_00136,Sanjay Kapoor,sanjay.kapoor57@yahoo.com,+91-84140-23717,8,3,1,0,0,1,78,1,1,3,4,2,1,6,3,2,8.0,25,0,55,Data Engineer,Intermediate,Poor,0
+RES_00129,Priya Joshi,priya.joshi78@gmail.com,+91-87969-38588,21,11,1,1,1,1,124,4,1,8,3,8,5,8,2,3,5.25,63,0,96,Mobile Developer,Expert,Good,0
+RES_00477,Meera Rao,meera.rao30@outlook.com,+91-88268-81608,32,3,0,0,0,1,50,18,1,5,1,5,0,24,1,2,1.78,12,0,57,Data Scientist,Intermediate,Fair,1
+RES_00009,Sanjay Joshi,sanjay.joshi67@gmail.com,+91-78974-65797,9,10,1,1,0,0,0,4,1,3,1,3,0,6,4,2,2.25,28,1,77,Data Engineer,Senior,Poor,0
+RES_00327,Anjali Nair,anjali.nair14@company.com,+91-98583-67210,14,4,0,0,0,1,40,4,1,7,2,5,2,9,2,0,3.5,40,1,80,Software Engineer,Intermediate,Fair,0
+RES_00464,Riya Patel,riya.patel56@company.com,+91-94162-93558,48,4,0,1,0,0,0,20,1,2,4,3,0,15,0,1,2.4,14,1,28,Data Scientist,Intermediate,Poor,1
+RES_00065,Neha Iyer,neha.iyer23@gmail.com,+91-85619-58589,15,1,1,1,0,1,176,3,1,9,1,10,10,12,1,2,5.0,61,1,87,Data Analyst,Entry Level,Excellent,0
+RES_00301,Riya Kulkarni,riya.kulkarni25@gmail.com,+91-71438-49227,7,0,1,1,0,1,80,1,1,7,1,4,4,10,1,2,7.0,49,0,66,Data Scientist,Fresher,Fair,0
+RES_00015,Sneha Kapoor,sneha.kapoor1@yahoo.com,+91-84357-63875,12,3,1,1,0,1,63,4,1,8,1,6,4,7,3,3,3.0,73,0,83,UI/UX Designer,Intermediate,Good,0
+RES_00157,Meera Reddy,meera.reddy79@yahoo.com,+91-80943-69782,6,0,1,1,0,0,0,0,0,2,4,1,1,5,0,0,6.0,39,0,31,Web Developer,Fresher,Poor,0
+RES_00041,Priya Patel,priya.patel98@outlook.com,+91-90775-92896,14,3,1,1,0,1,184,5,1,9,1,15,11,15,2,4,2.8,98,1,92,Data Scientist,Intermediate,Excellent,0
+RES_00380,Sneha Kumar,sneha.kumar65@gmail.com,+91-89572-51452,8,4,1,0,0,1,43,2,0,5,1,2,2,5,3,0,4.0,17,0,69,Mobile Developer,Intermediate,Poor,0
+RES_00469,Vikram Reddy,vikram.reddy66@outlook.com,+91-86026-22795,55,11,1,0,1,1,71,18,1,7,2,8,0,15,2,0,3.06,13,1,67,Web Developer,Expert,Fair,1
+RES_00404,Sneha Nair,sneha.nair6@outlook.com,+91-71564-95626,6,0,0,0,0,0,0,0,1,4,4,0,1,7,1,2,6.0,26,1,37,Data Scientist,Fresher,Poor,0
+RES_00217,Rohan Gupta,rohan.gupta78@gmail.com,+91-97904-64800,9,3,1,0,0,1,64,1,1,2,1,2,0,5,2,2,9.0,40,0,64,Web Developer,Intermediate,Poor,0
+RES_00280,Rohan Patel,rohan.patel13@company.com,+91-74509-54499,9,9,1,0,1,0,0,3,1,4,3,1,2,6,5,2,3.0,22,0,75,Data Analyst,Senior,Poor,0
+RES_00435,Pooja Reddy,pooja.reddy6@outlook.com,+91-92735-69847,40,6,1,1,0,1,148,14,1,8,2,9,0,24,0,2,2.86,34,0,60,Data Scientist,Senior,Good,1
+RES_00431,Aditya Iyer,aditya.iyer60@outlook.com,+91-74806-52945,48,10,1,0,0,1,62,22,1,7,2,8,2,14,3,3,2.18,21,1,66,Web Developer,Senior,Good,1
+RES_00338,Sneha Gupta,sneha.gupta97@yahoo.com,+91-71288-68062,6,2,0,0,1,0,0,2,1,5,3,0,0,6,2,2,3.0,17,0,59,Data Analyst,Entry Level,Poor,0
+RES_00237,Vikram Gupta,vikram.gupta92@yahoo.com,+91-94606-92638,12,1,1,0,0,1,79,1,1,7,1,6,6,11,1,2,12.0,66,1,69,Software Engineer,Entry Level,Good,0
+RES_00208,Aditya Shah,aditya.shah83@gmail.com,+91-87763-12900,10,2,1,1,1,1,78,2,0,6,1,10,4,7,2,3,5.0,71,1,75,UI/UX Designer,Entry Level,Good,0
+RES_00213,Sanjay Gupta,sanjay.gupta47@gmail.com,+91-72796-97176,8,2,1,0,0,1,129,2,1,8,1,12,7,11,2,1,4.0,52,1,82,Data Engineer,Entry Level,Good,0
+RES_00296,Sneha Kulkarni,sneha.kulkarni10@gmail.com,+91-94049-59650,15,5,1,1,1,1,218,6,1,9,2,11,5,15,2,4,2.5,99,1,89,Data Scientist,Intermediate,Excellent,0
+RES_00458,Amit Singh,amit.singh18@gmail.com,+91-75952-19697,50,4,1,1,0,1,86,19,1,8,2,8,0,25,2,1,2.63,25,1,56,Data Analyst,Intermediate,Good,1
+RES_00252,Pooja Nair,pooja.nair60@outlook.com,+91-89336-71773,13,1,1,1,0,1,194,4,1,10,1,18,10,12,1,2,3.25,74,1,91,Data Analyst,Entry Level,Excellent,0
+RES_00489,Divya Gupta,divya.gupta12@company.com,+91-99462-43654,33,1,1,0,0,0,0,12,0,4,3,4,0,15,0,2,2.75,23,0,49,DevOps Engineer,Entry Level,Poor,1
+RES_00487,Sneha Shah,sneha.shah19@company.com,+91-84914-33396,35,8,1,1,0,1,40,15,1,6,2,6,0,12,0,2,2.33,12,0,54,Web Developer,Senior,Fair,1
+RES_00304,Rohan Reddy,rohan.reddy40@outlook.com,+91-84036-50023,25,8,1,1,0,1,107,5,1,9,2,13,11,11,5,4,5.0,96,1,98,Web Developer,Senior,Excellent,0
+RES_00351,Aditya Iyer,aditya.iyer62@yahoo.com,+91-91562-93840,11,1,1,1,1,1,209,4,1,10,1,16,7,14,2,2,2.75,67,0,87,Software Engineer,Entry Level,Excellent,0
+RES_00270,Pooja Shah,pooja.shah41@gmail.com,+91-98992-83434,8,0,1,1,0,1,242,2,1,8,1,19,6,9,2,2,4.0,98,1,84,UI/UX Designer,Fresher,Excellent,0
+RES_00202,Arjun Rao,arjun.rao15@yahoo.com,+91-83700-23740,11,2,1,1,0,1,91,1,1,9,1,6,4,12,1,2,11.0,66,1,73,Data Scientist,Entry Level,Good,0
+RES_00162,Pooja Kapoor,pooja.kapoor40@gmail.com,+91-70994-96729,13,4,1,0,0,1,132,3,1,9,2,12,3,9,3,1,4.33,72,0,87,Web Developer,Intermediate,Good,0
+RES_00044,Karthik Rao,karthik.rao54@yahoo.com,+91-91932-51862,8,0,0,0,1,1,50,1,1,7,1,5,4,7,0,0,8.0,55,0,58,Web Developer,Fresher,Fair,0
+RES_00218,Amit Joshi,amit.joshi94@gmail.com,+91-77621-43734,7,0,1,1,1,1,135,1,1,8,1,6,7,11,0,1,7.0,50,1,55,Software Engineer,Fresher,Good,0
+RES_00402,Sanjay Patel,sanjay.patel79@company.com,+91-94053-57665,18,8,1,1,1,1,111,5,1,10,2,12,12,11,4,5,3.6,62,1,100,Web Developer,Senior,Excellent,0
+RES_00191,Sanjay Kulkarni,sanjay.kulkarni31@yahoo.com,+91-91044-93100,6,0,1,1,0,1,206,2,1,9,1,11,8,13,0,1,3.0,100,1,67,Data Engineer,Fresher,Excellent,0
+RES_00310,Amit Gupta,amit.gupta14@outlook.com,+91-97870-34372,6,2,1,1,0,0,0,2,1,2,3,1,2,6,1,2,3.0,31,0,51,DevOps Engineer,Entry Level,Poor,0
+RES_00260,Vikram Kapoor,vikram.kapoor34@outlook.com,+91-98862-35516,10,0,1,0,1,1,245,3,1,9,1,19,6,12,2,2,3.33,93,1,83,DevOps Engineer,Fresher,Excellent,0
+RES_00106,Anjali Singh,anjali.singh21@yahoo.com,+91-76448-78425,9,0,1,1,0,1,80,0,1,6,1,9,4,11,0,1,9.0,69,1,59,Data Engineer,Fresher,Good,0
+RES_00054,Vikram Sharma,vikram.sharma25@outlook.com,+91-86611-31476,25,12,1,1,0,1,163,5,1,8,3,18,5,13,5,2,5.0,66,1,97,Data Engineer,Expert,Excellent,0
+RES_00390,Vikram Mehta,vikram.mehta60@yahoo.com,+91-87621-94708,12,2,1,0,1,1,116,4,1,9,1,15,7,11,2,5,3.0,89,1,89,Web Developer,Entry Level,Excellent,0
+RES_00002,Meera Desai,meera.desai54@outlook.com,+91-84813-35427,25,6,1,1,0,1,203,7,1,10,2,10,5,10,4,3,3.57,95,1,97,Mobile Developer,Senior,Excellent,0
+RES_00442,Sanjay Sharma,sanjay.sharma57@outlook.com,+91-97456-20576,40,8,1,1,0,0,0,17,1,3,4,0,0,16,4,1,2.35,25,0,52,Software Engineer,Senior,Poor,1
+RES_00483,Priya Kulkarni,priya.kulkarni60@outlook.com,+91-71113-63933,34,5,1,0,0,1,58,14,1,4,4,0,0,18,0,2,2.43,22,0,30,Data Scientist,Intermediate,Poor,1
+RES_00050,Priya Shah,priya.shah59@yahoo.com,+91-86103-69392,9,1,1,0,1,1,106,4,1,9,1,19,5,9,1,2,2.25,66,1,83,UI/UX Designer,Entry Level,Excellent,0
+RES_00420,Pooja Kapoor,pooja.kapoor96@company.com,+91-94140-19331,4,0,1,1,1,0,0,2,1,7,1,12,7,11,0,2,2.0,65,1,50,Software Engineer,Fresher,Good,0
+RES_00081,Rohan Gupta,rohan.gupta89@outlook.com,+91-95595-65701,17,3,1,0,0,1,173,6,1,9,1,16,8,12,2,3,2.83,81,1,92,DevOps Engineer,Intermediate,Excellent,0
+RES_00206,Rohan Singh,rohan.singh78@yahoo.com,+91-81408-42343,9,0,1,1,0,1,199,1,1,9,1,20,12,13,2,1,9.0,93,1,82,Data Engineer,Fresher,Excellent,0
+RES_00035,Meera Sharma,meera.sharma94@company.com,+91-79219-18562,9,3,1,1,0,0,0,3,0,5,1,8,4,9,3,0,3.0,36,1,74,Data Engineer,Intermediate,Fair,0
+RES_00264,Priya Kapoor,priya.kapoor16@yahoo.com,+91-97913-92158,7,3,1,0,1,1,37,2,1,5,4,1,1,6,2,1,3.5,22,1,56,DevOps Engineer,Intermediate,Poor,0
+RES_00428,Sneha Rao,sneha.rao13@outlook.com,+91-87224-20645,36,6,1,1,1,0,0,16,0,5,4,1,0,11,3,2,2.25,13,0,45,Mobile Developer,Senior,Poor,1
+RES_00367,Aditya Singh,aditya.singh29@gmail.com,+91-98111-16199,9,4,0,0,0,1,80,1,1,2,1,1,1,4,2,1,9.0,27,0,65,UI/UX Designer,Intermediate,Poor,0
+RES_00092,Vikram Singh,vikram.singh48@gmail.com,+91-94547-33740,15,4,1,1,0,1,82,5,1,7,2,8,3,11,3,3,3.0,49,1,85,Data Engineer,Intermediate,Good,0
+RES_00340,Arjun Kapoor,arjun.kapoor30@gmail.com,+91-81286-35870,12,5,0,0,0,0,0,4,1,6,2,4,1,8,2,0,3.0,31,0,73,Data Analyst,Intermediate,Fair,0
+RES_00474,Neha Kapoor,neha.kapoor3@outlook.com,+91-73795-76248,54,9,0,1,0,1,42,21,1,5,2,8,0,20,3,0,2.57,21,0,56,Data Scientist,Senior,Fair,1
+RES_00053,Rohan Shah,rohan.shah99@company.com,+91-81452-54243,8,2,1,0,0,1,67,1,0,5,1,7,2,10,2,0,8.0,33,0,68,Data Scientist,Entry Level,Fair,0
+RES_00346,Neha Desai,neha.desai21@outlook.com,+91-80029-54149,9,1,1,0,0,1,61,1,1,9,1,10,3,10,2,2,9.0,58,0,73,DevOps Engineer,Entry Level,Good,0
+RES_00265,Divya Shah,divya.shah65@yahoo.com,+91-94905-31266,13,3,1,1,1,0,0,6,1,10,1,15,9,12,3,3,2.17,65,1,86,Data Analyst,Intermediate,Excellent,0
+RES_00242,Pooja Nair,pooja.nair86@gmail.com,+91-98151-33331,14,5,1,1,0,1,90,4,1,8,2,11,4,11,2,1,3.5,45,1,85,Software Engineer,Intermediate,Good,0
+RES_00014,Sanjay Gupta,sanjay.gupta40@yahoo.com,+91-76229-91194,8,2,1,1,0,1,199,3,1,8,1,11,12,14,1,4,2.67,97,1,79,Software Engineer,Entry Level,Excellent,0
+RES_00316,Amit Reddy,amit.reddy9@yahoo.com,+91-80605-99665,8,0,1,0,0,1,70,0,1,8,1,10,4,10,0,1,8.0,68,0,55,DevOps Engineer,Fresher,Good,0
+RES_00089,Aditya Gupta,aditya.gupta94@outlook.com,+91-87154-98328,12,3,1,1,0,0,0,2,1,7,1,7,1,8,2,1,6.0,36,0,74,DevOps Engineer,Intermediate,Fair,0
+RES_00388,Priya Joshi,priya.joshi49@gmail.com,+91-93429-13342,6,2,1,0,0,1,61,1,0,7,1,5,1,6,1,2,6.0,49,0,57,UI/UX Designer,Entry Level,Fair,0
+RES_00274,Meera Kulkarni,meera.kulkarni13@gmail.com,+91-88244-78592,5,0,0,0,0,1,41,2,1,4,1,7,3,7,1,1,2.5,56,0,58,Web Developer,Fresher,Fair,0
+RES_00167,Priya Iyer,priya.iyer9@yahoo.com,+91-82428-48376,8,1,0,1,0,1,77,2,1,5,1,6,1,6,1,0,4.0,43,0,64,UI/UX Designer,Entry Level,Fair,0
+RES_00329,Riya Kumar,riya.kumar99@outlook.com,+91-78252-80097,18,7,1,1,0,0,0,5,1,8,2,6,4,11,3,2,3.6,57,1,86,Data Engineer,Senior,Good,0
+RES_00493,Rahul Mehta,rahul.mehta7@gmail.com,+91-82556-37691,53,7,0,0,0,0,0,15,1,3,1,4,0,18,1,2,3.53,37,0,50,Data Engineer,Senior,Poor,1
+RES_00135,Sneha Kulkarni,sneha.kulkarni52@company.com,+91-72764-83728,10,6,0,1,1,0,0,3,1,4,4,3,2,5,2,1,3.33,45,0,60,Mobile Developer,Senior,Poor,0
+RES_00307,Aditya Rao,aditya.rao20@yahoo.com,+91-72265-56354,16,3,1,1,0,1,203,5,1,8,1,16,8,12,3,4,3.2,61,1,91,Data Analyst,Intermediate,Excellent,0
+RES_00481,Pooja Nair,pooja.nair60@gmail.com,+91-89767-34264,35,10,0,0,1,0,0,19,1,2,4,4,0,13,3,1,1.84,31,0,47,Data Analyst,Senior,Poor,1
+RES_00320,Sneha Nair,sneha.nair42@yahoo.com,+91-74738-87947,16,6,0,1,1,0,0,5,1,5,2,7,4,7,2,2,3.2,51,1,76,Mobile Developer,Senior,Fair,0
+RES_00244,Priya Singh,priya.singh45@outlook.com,+91-94517-92197,8,0,1,0,0,1,86,0,1,8,1,6,3,8,2,1,8.0,61,0,65,Mobile Developer,Fresher,Good,0
+RES_00055,Pooja Gupta,pooja.gupta90@yahoo.com,+91-71968-62141,19,8,1,1,1,1,149,6,1,6,2,10,7,12,2,3,3.17,72,1,93,Data Scientist,Senior,Good,0
+RES_00364,Vikram Sharma,vikram.sharma88@company.com,+91-88936-88791,12,7,1,1,0,0,0,5,1,5,2,3,2,8,4,0,2.4,41,1,82,DevOps Engineer,Senior,Fair,0
+RES_00051,Aditya Gupta,aditya.gupta60@company.com,+91-94254-53390,15,5,1,1,0,0,0,3,1,9,2,12,5,8,3,2,5.0,74,1,82,Mobile Developer,Intermediate,Good,0
+RES_00457,Pooja Shah,pooja.shah93@outlook.com,+91-86450-79719,53,10,1,1,1,0,0,16,1,4,4,0,0,16,1,0,3.31,31,0,50,UI/UX Designer,Senior,Poor,1
+RES_00175,Arjun Gupta,arjun.gupta13@yahoo.com,+91-91730-83922,17,10,1,0,1,1,46,2,1,6,2,6,4,8,2,0,8.5,33,0,76,Data Analyst,Senior,Fair,0
+RES_00446,Anjali Reddy,anjali.reddy48@company.com,+91-75071-34560,35,3,1,1,0,0,0,14,1,2,3,1,0,12,0,1,2.5,32,1,50,DevOps Engineer,Intermediate,Poor,1
+RES_00190,Aditya Desai,aditya.desai95@company.com,+91-73824-25666,8,0,1,0,1,1,116,2,1,9,1,9,5,9,0,2,4.0,61,0,67,Web Developer,Fresher,Good,0
+RES_00497,Anjali Rao,anjali.rao56@yahoo.com,+91-84843-82903,36,5,1,0,1,1,67,13,0,7,2,7,0,17,0,1,2.77,24,1,51,Web Developer,Intermediate,Fair,1
+RES_00188,Pooja Mehta,pooja.mehta66@outlook.com,+91-93306-59325,13,5,1,1,0,1,104,2,1,6,2,8,6,11,2,1,6.5,73,0,89,Data Engineer,Intermediate,Good,0
+RES_00170,Karthik Mehta,karthik.mehta13@company.com,+91-88683-37566,12,1,1,1,0,1,174,2,1,10,1,19,8,10,2,0,6.0,96,1,87,Mobile Developer,Entry Level,Excellent,0
+RES_00059,Amit Mehta,amit.mehta83@gmail.com,+91-90348-89943,15,9,1,1,0,0,0,4,1,9,2,11,3,10,4,3,3.75,75,1,90,DevOps Engineer,Senior,Good,0
+RES_00049,Vikram Sharma,vikram.sharma71@company.com,+91-70793-48897,7,0,1,0,1,1,154,1,1,9,1,16,9,11,0,1,7.0,67,1,56,Web Developer,Fresher,Excellent,0
+RES_00345,Sanjay Kumar,sanjay.kumar87@company.com,+91-74029-33322,10,3,1,0,0,0,0,3,1,5,3,3,0,6,3,2,3.33,15,1,66,DevOps Engineer,Intermediate,Poor,0
+RES_00236,Rohan Gupta,rohan.gupta12@yahoo.com,+91-71348-25402,7,9,1,0,1,0,0,3,1,2,3,4,0,7,4,0,2.33,45,0,66,Data Scientist,Senior,Poor,0
+RES_00253,Amit Shah,amit.shah76@outlook.com,+91-77302-55636,15,5,1,0,1,1,70,3,0,6,2,6,7,9,2,2,5.0,66,1,79,Web Developer,Intermediate,Good,0
+RES_00022,Vikram Kulkarni,vikram.kulkarni3@outlook.com,+91-79643-38239,13,3,1,0,1,0,0,3,1,7,1,7,1,9,2,1,4.33,35,1,77,Data Engineer,Intermediate,Fair,0
+RES_00314,Anjali Rao,anjali.rao82@outlook.com,+91-83117-37019,12,2,1,0,1,1,105,1,1,9,1,12,3,8,1,1,12.0,48,0,73,Mobile Developer,Entry Level,Good,0
+RES_00460,Divya Nair,divya.nair85@outlook.com,+91-96574-43756,49,7,0,0,0,1,75,18,1,2,4,3,0,17,2,0,2.72,14,1,49,Software Engineer,Senior,Poor,1
+RES_00161,Rahul Mehta,rahul.mehta55@yahoo.com,+91-82114-82333,7,3,1,0,0,1,69,2,1,3,3,3,2,6,2,1,3.5,31,0,62,DevOps Engineer,Intermediate,Poor,0
+RES_00277,Divya Sharma,divya.sharma85@company.com,+91-95064-32374,4,0,1,0,0,0,0,1,1,3,1,1,1,5,0,2,4.0,45,0,37,Web Developer,Fresher,Poor,0
+RES_00444,Sneha Reddy,sneha.reddy59@yahoo.com,+91-71875-71899,30,5,1,1,0,1,94,17,1,4,2,6,0,12,1,0,1.76,32,0,52,UI/UX Designer,Intermediate,Fair,1
+RES_00192,Karthik Joshi,karthik.joshi57@company.com,+91-90865-13918,17,5,1,0,0,1,67,4,1,8,2,8,4,8,2,1,4.25,47,1,83,Mobile Developer,Intermediate,Good,0
+RES_00386,Sanjay Singh,sanjay.singh22@yahoo.com,+91-95630-75043,5,0,1,1,0,1,86,0,1,9,1,6,5,11,0,2,5.0,59,1,51,Data Engineer,Fresher,Good,0
+RES_00294,Priya Kumar,priya.kumar6@gmail.com,+91-83097-93527,15,2,1,1,1,1,231,2,1,10,1,20,11,9,2,2,7.5,94,1,87,UI/UX Designer,Entry Level,Excellent,0
+RES_00414,Pooja Gupta,pooja.gupta59@yahoo.com,+91-70273-69316,12,4,1,1,0,1,148,5,1,9,2,11,5,13,3,3,2.4,84,0,94,Data Engineer,Intermediate,Excellent,0
+RES_00344,Amit Iyer,amit.iyer51@company.com,+91-75626-73101,6,0,1,0,0,1,236,3,1,10,1,16,7,10,0,0,2.0,88,1,69,Mobile Developer,Fresher,Excellent,0
+RES_00258,Meera Iyer,meera.iyer47@yahoo.com,+91-85872-70689,10,5,1,0,0,0,0,5,1,6,2,12,5,8,3,3,2.0,66,1,75,Mobile Developer,Intermediate,Good,0
+RES_00309,Neha Joshi,neha.joshi25@gmail.com,+91-97335-92955,8,10,1,1,1,0,0,3,1,3,1,2,0,6,2,2,2.67,16,0,68,DevOps Engineer,Senior,Poor,0
+RES_00150,Sanjay Mehta,sanjay.mehta98@outlook.com,+91-81175-98370,6,2,1,1,0,1,133,1,1,8,1,10,5,11,2,1,6.0,57,1,77,Data Engineer,Entry Level,Good,0
+RES_00131,Neha Reddy,neha.reddy67@outlook.com,+91-89985-11880,3,0,1,0,0,1,41,0,1,5,3,2,1,7,1,1,3.0,21,0,44,Software Engineer,Fresher,Poor,0
+RES_00152,Sanjay Sharma,sanjay.sharma35@yahoo.com,+91-86758-80801,14,8,1,1,1,0,0,4,1,8,2,7,3,11,3,3,3.5,64,1,80,Data Engineer,Senior,Good,0
+RES_00360,Neha Desai,neha.desai79@company.com,+91-95034-67264,4,1,0,1,0,0,0,2,1,2,1,3,2,6,1,0,2.0,39,0,46,DevOps Engineer,Entry Level,Poor,0
+RES_00100,Anjali Patel,anjali.patel22@outlook.com,+91-75953-15522,6,2,1,1,0,1,34,2,0,7,1,3,2,9,2,0,3.0,40,0,66,Data Engineer,Entry Level,Fair,0
+RES_00373,Sanjay Nair,sanjay.nair14@gmail.com,+91-85757-69519,9,2,1,0,0,1,129,3,1,10,1,11,9,10,2,5,3.0,86,1,88,Mobile Developer,Entry Level,Excellent,0
+RES_00088,Rohan Reddy,rohan.reddy13@outlook.com,+91-77318-99712,11,9,0,0,0,1,69,3,1,3,1,3,2,5,2,2,3.67,44,0,70,Mobile Developer,Senior,Poor,0
+RES_00459,Riya Mehta,riya.mehta10@gmail.com,+91-94605-16060,35,3,1,0,1,1,89,15,1,5,3,2,0,17,0,0,2.33,12,0,45,DevOps Engineer,Intermediate,Poor,1
+RES_00331,Riya Gupta,riya.gupta6@outlook.com,+91-71903-38565,10,3,1,1,0,1,99,4,1,6,1,8,4,8,3,2,2.5,53,1,82,DevOps Engineer,Intermediate,Fair,0
+RES_00215,Arjun Shah,arjun.shah43@outlook.com,+91-98192-17106,6,0,0,0,0,0,0,1,0,4,1,6,4,8,0,1,6.0,50,0,40,Data Analyst,Fresher,Fair,0
+RES_00467,Sanjay Kapoor,sanjay.kapoor55@gmail.com,+91-75990-70928,43,14,1,1,0,1,69,15,1,5,2,8,1,22,3,1,2.87,39,1,58,Mobile Developer,Expert,Fair,1
+RES_00122,Rohan Mehta,rohan.mehta99@yahoo.com,+91-96626-40774,12,9,1,1,0,1,138,4,1,6,3,12,3,7,2,3,3.0,64,1,82,UI/UX Designer,Senior,Good,0
+RES_00500,Arjun Iyer,arjun.iyer37@company.com,+91-75407-46929,43,10,1,1,1,1,96,13,1,7,2,8,0,21,2,2,3.31,25,0,73,Data Analyst,Senior,Fair,1
+RES_00021,Sanjay Desai,sanjay.desai41@gmail.com,+91-79451-24153,12,8,1,0,0,1,93,5,1,9,2,6,7,10,3,2,2.4,64,1,83,Data Analyst,Senior,Good,0
+RES_00189,Arjun Joshi,arjun.joshi40@outlook.com,+91-71608-17922,10,1,1,1,0,1,65,2,0,7,1,7,2,8,2,1,5.0,43,0,70,DevOps Engineer,Entry Level,Fair,0
+RES_00072,Rahul Kapoor,rahul.kapoor32@gmail.com,+91-70015-53539,4,0,1,1,0,0,0,2,1,5,1,8,2,10,1,0,2.0,44,1,60,Data Scientist,Fresher,Fair,0
+RES_00107,Priya Kulkarni,priya.kulkarni93@gmail.com,+91-79106-49229,14,3,1,0,1,0,0,5,1,9,1,17,5,11,2,3,2.8,82,1,83,Web Developer,Intermediate,Excellent,0
+RES_00271,Arjun Nair,arjun.nair29@yahoo.com,+91-85980-73555,7,0,1,1,0,1,75,1,1,7,1,7,5,8,2,1,7.0,67,1,70,Mobile Developer,Fresher,Good,0
+RES_00349,Rohan Singh,rohan.singh45@company.com,+91-82145-12498,11,4,1,1,0,1,107,2,1,8,2,8,6,11,2,1,5.5,54,0,82,Data Engineer,Intermediate,Good,0
+RES_00436,Rohan Sharma,rohan.sharma64@gmail.com,+91-73426-78460,30,5,0,0,0,1,77,17,1,3,3,1,0,13,1,1,1.76,12,1,45,Data Analyst,Intermediate,Poor,1
+RES_00103,Divya Desai,divya.desai21@outlook.com,+91-82472-25279,9,0,1,0,1,1,149,2,1,9,1,12,6,8,2,2,4.5,63,0,81,Mobile Developer,Fresher,Good,0

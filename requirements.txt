@@ -1,0 +1,26 @@
+# Resume Analyzer - ML-Powered
+# Python Package Requirements
+
+# Web Framework
+Flask>=2.3.0
+Werkzeug>=2.3.0
+flask-cors>=4.0.0
+
+# PDF/Document Processing
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+
+# Machine Learning & Data Science
+# Pinned for compatibility with current serialized models in models/*.pkl
+scikit-learn==1.5.2
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Optional (for enhanced PDF extraction)
+# Uncomment if you need OCR for scanned PDFs
+# pytesseract>=0.3.10
+# pdf2image>=1.16.3
+# Pillow>=10.0.0
+
+# Optional (for alternative PDF parsing)
+# pdfplumber>=0.9.0

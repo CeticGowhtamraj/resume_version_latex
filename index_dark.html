@@ -1,0 +1,2542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Analyzer Pro - Dark Mode</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#667eea",
+              secondary: "#764ba2",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .dark .gradient-bg-dark {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .dark .card-hover:hover {
+        box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+      }
+
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #667eea;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+
+      .dark .loader {
+        border-color: #374151;
+        border-top-color: #667eea;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.5s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .skill-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0.25rem;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      .dark .skill-badge {
+        background: linear-gradient(135deg, #4c63d2 0%, #5a3d8a 100%);
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .timeline-item:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .timeline-item:after {
+        content: "";
+        position: absolute;
+        left: -6px;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #667eea;
+        border: 3px solid white;
+      }
+
+      .dark .timeline-item:after {
+        border-color: #1f2937;
+      }
+
+      .progress-bar-animated {
+        animation: progressAnimation 1.5s ease-out;
+      }
+
+      @keyframes progressAnimation {
+        from {
+          width: 0%;
+        }
+      }
+
+      /* Dark mode toggle */
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .theme-toggle:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .dark .theme-toggle {
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .dark .theme-toggle:hover {
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      /* Authenticity badge */
+      .auth-badge {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .auth-badge.verified {
+        background: #d1fae5;
+        color: #065f46;
+      }
+
+      .dark .auth-badge.verified {
+        background: #064e3b;
+        color: #6ee7b7;
+      }
+
+      .auth-badge.warning {
+        background: #fef3c7;
+        color: #92400e;
+      }
+
+      .dark .auth-badge.warning {
+        background: #78350f;
+        color: #fcd34d;
+      }
+
+      /* ===== ENHANCED LOADING ANIMATIONS ===== */
+
+      /* Document Container with Scanning Effect */
+      .document-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Scanning Beam Animation */
+      .scanning-beam {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(102, 126, 234, 0.8) 50%,
+          transparent 100%
+        );
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+        animation: scan 2.5s ease-in-out infinite;
+        z-index: 10;
+      }
+
+      @keyframes scan {
+        0% {
+          top: 0;
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          top: 100%;
+          opacity: 0;
+        }
+      }
+
+      /* Checkmarks appearing during scan */
+      .scan-check {
+        position: absolute;
+        opacity: 0;
+        font-size: 1.5rem;
+        animation: checkAppear 2.5s ease-in-out infinite;
+      }
+
+      .scan-check-1 {
+        top: 20%;
+        right: -20%;
+        animation-delay: 0.8s;
+      }
+
+      .scan-check-2 {
+        top: 50%;
+        left: -20%;
+        animation-delay: 1.4s;
+      }
+
+      .scan-check-3 {
+        top: 80%;
+        right: -20%;
+        animation-delay: 2s;
+      }
+
+      @keyframes checkAppear {
+        0%,
+        30% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        40% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+        50%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Typing Dots Animation */
+      .typing-dots {
+        display: inline-flex;
+        gap: 4px;
+      }
+
+      .typing-dots span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #667eea;
+        animation: typing 1.4s infinite;
+      }
+
+      .typing-dots span:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .typing-dots span:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes typing {
+        0%,
+        60%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.7;
+        }
+        30% {
+          transform: translateY(-10px);
+          opacity: 1;
+        }
+      }
+
+      /* Progress Bar with Gradient Fill */
+      .progress-bar-fill {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        width: 0%;
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+      }
+
+      /* Shimmer Effect on Progress Bar */
+      .progress-bar-shimmer {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          transparent 100%
+        );
+        animation: shimmer 2s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      /* Analysis Steps */
+      .analysis-step {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        background: #f9fafb;
+        border-radius: 12px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+
+      .dark .analysis-step {
+        background: #1f2937;
+      }
+
+      .analysis-step.active {
+        border-color: #667eea;
+        background: #eef2ff;
+        transform: scale(1.05);
+      }
+
+      .dark .analysis-step.active {
+        background: #312e81;
+        border-color: #818cf8;
+      }
+
+      .analysis-step.completed {
+        border-color: #10b981;
+        background: #d1fae5;
+      }
+
+      .dark .analysis-step.completed {
+        background: #064e3b;
+        border-color: #34d399;
+      }
+
+      .step-icon {
+        font-size: 1.5rem;
+      }
+
+      .step-icon i {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .analysis-step.active .step-icon i {
+        animation: bounce 1s ease-in-out infinite;
+      }
+
+      .analysis-step.completed .step-icon i {
+        color: #10b981 !important;
+        animation: checkBounce 0.5s ease;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @keyframes checkBounce {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Fun Fact Fade In/Out */
+      #funFact {
+        transition: opacity 0.3s ease;
+      }
+
+      #loadingText {
+        transition: opacity 0.15s ease;
+      }
+
+      /* ===== WELCOME PAGE STYLES ===== */
+      .welcome-hero {
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #1e1b4b 50%,
+          #0f172a 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .welcome-hero::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(102, 126, 234, 0.15) 0%,
+          transparent 70%
+        );
+        top: -200px;
+        right: -100px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .welcome-hero::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(118, 75, 162, 0.12) 0%,
+          transparent 70%
+        );
+        bottom: -100px;
+        left: -100px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .guideline-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .guideline-card:hover {
+        background: rgba(102, 126, 234, 0.12);
+        border-color: rgba(102, 126, 234, 0.4);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(102, 126, 234, 0.2);
+      }
+
+      .checklist-item {
+        transition: all 0.2s ease;
+      }
+
+      .checklist-item:hover {
+        transform: translateX(4px);
+      }
+
+      .score-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+
+      .cta-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .cta-btn::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -60%;
+        width: 40%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.15);
+        transform: skewX(-20deg);
+        transition: left 0.5s ease;
+      }
+
+      .cta-btn:hover::after {
+        left: 120%;
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 40px rgba(102, 126, 234, 0.5);
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .stat-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .float-anim {
+        animation: floatAnim 3s ease-in-out infinite;
+      }
+
+      @keyframes floatAnim {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .slide-up {
+        animation: slideUp 0.6s ease-out both;
+      }
+
+      .slide-up-delay-1 {
+        animation-delay: 0.1s;
+      }
+      .slide-up-delay-2 {
+        animation-delay: 0.2s;
+      }
+      .slide-up-delay-3 {
+        animation-delay: 0.3s;
+      }
+      .slide-up-delay-4 {
+        animation-delay: 0.4s;
+      }
+      .slide-up-delay-5 {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .glow-ring {
+        box-shadow:
+          0 0 0 4px rgba(102, 126, 234, 0.2),
+          0 0 0 8px rgba(102, 126, 234, 0.08);
+      }
+
+      .badge-do {
+        background: rgba(16, 185, 129, 0.15);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        color: #6ee7b7;
+      }
+      .badge-dont {
+        background: rgba(239, 68, 68, 0.12);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        color: #fca5a5;
+      }
+
+      /* ===== COVER LETTER SECTION ===== */
+      .cl-panel {
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.06) 0%,
+          rgba(118, 75, 162, 0.06) 100%
+        );
+        border: 1.5px solid rgba(102, 126, 234, 0.25);
+        transition: all 0.3s ease;
+      }
+      .dark .cl-panel {
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.1) 0%,
+          rgba(118, 75, 162, 0.1) 100%
+        );
+        border-color: rgba(102, 126, 234, 0.35);
+      }
+      .cl-letter-box {
+        font-family: "Georgia", serif;
+        line-height: 1.85;
+        white-space: pre-wrap;
+        background: #fff;
+        color: #1a202c;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 2.5rem 3rem;
+        box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s ease;
+      }
+      .dark .cl-letter-box {
+        background: #1e293b;
+        color: #e2e8f0;
+        border-color: #334155;
+      }
+      .cl-skill-match {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background: rgba(102, 126, 234, 0.12);
+        border: 1px solid rgba(102, 126, 234, 0.3);
+        color: #667eea;
+      }
+      .dark .cl-skill-match {
+        color: #a5b4fc;
+        background: rgba(102, 126, 234, 0.2);
+      }
+      .cl-url-input {
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .cl-url-input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+      }
+      .cl-generate-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .cl-generate-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.45);
+      }
+      .cl-generate-btn:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+        transform: none;
+      }
+      @keyframes cl-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .cl-spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: cl-spin 0.7s linear infinite;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+
+      /* ===== COMPANY SUGGESTIONS ===== */
+      .co-panel {
+        background: linear-gradient(
+          135deg,
+          rgba(16, 185, 129, 0.05) 0%,
+          rgba(59, 130, 246, 0.05) 100%
+        );
+        border: 1.5px solid rgba(16, 185, 129, 0.2);
+      }
+      .dark .co-panel {
+        background: linear-gradient(
+          135deg,
+          rgba(16, 185, 129, 0.08) 0%,
+          rgba(59, 130, 246, 0.08) 100%
+        );
+        border-color: rgba(16, 185, 129, 0.25);
+      }
+      .company-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        transition: all 0.25s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .dark .company-card {
+        background: #1f2937;
+        border-color: #374151;
+      }
+      .company-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #667eea, #764ba2);
+        border-radius: 4px 0 0 4px;
+      }
+      .company-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(102, 126, 234, 0.18);
+        border-color: rgba(102, 126, 234, 0.4);
+      }
+      .dark .company-card:hover {
+        box-shadow: 0 12px 32px rgba(102, 126, 234, 0.28);
+      }
+      .co-type-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 999px;
+        letter-spacing: 0.04em;
+      }
+      .co-type-Product {
+        background: rgba(99, 102, 241, 0.12);
+        color: #6366f1;
+        border: 1px solid rgba(99, 102, 241, 0.25);
+      }
+      .co-type-Service {
+        background: rgba(245, 158, 11, 0.12);
+        color: #d97706;
+        border: 1px solid rgba(245, 158, 11, 0.25);
+      }
+      .co-type-Startup {
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+        border: 1px solid rgba(239, 68, 68, 0.22);
+      }
+      .co-type-MNC {
+        background: rgba(59, 130, 246, 0.1);
+        color: #3b82f6;
+        border: 1px solid rgba(59, 130, 246, 0.25);
+      }
+      .co-type-Consulting {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+        border: 1px solid rgba(16, 185, 129, 0.25);
+      }
+      .co-type-Analytics {
+        background: rgba(168, 85, 247, 0.1);
+        color: #a855f7;
+        border: 1px solid rgba(168, 85, 247, 0.25);
+      }
+      .co-type-Agency {
+        background: rgba(236, 72, 153, 0.1);
+        color: #ec4899;
+        border: 1px solid rgba(236, 72, 153, 0.25);
+      }
+      .co-type-BFSI {
+        background: rgba(20, 184, 166, 0.1);
+        color: #14b8a6;
+        border: 1px solid rgba(20, 184, 166, 0.25);
+      }
+      .co-tag {
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(102, 126, 234, 0.08);
+        border: 1px solid rgba(102, 126, 234, 0.18);
+        color: #667eea;
+        white-space: nowrap;
+      }
+      .dark .co-tag {
+        background: rgba(102, 126, 234, 0.15);
+        color: #a5b4fc;
+      }
+      .co-salary {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #10b981;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        padding: 2px 10px;
+        border-radius: 999px;
+      }
+      .co-apply-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: all 0.2s ease;
+        font-size: 0.8rem;
+      }
+      .co-apply-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
+      }
+      .co-level-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      /* ===== LATEX PANEL ===== */
+      .ltx-panel {
+        background: linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.03) 0%,
+          rgba(99, 102, 241, 0.05) 100%
+        );
+        border: 1.5px solid rgba(99, 102, 241, 0.22);
+      }
+      .dark .ltx-panel {
+        background: linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.4) 0%,
+          rgba(99, 102, 241, 0.1) 100%
+        );
+        border-color: rgba(99, 102, 241, 0.35);
+      }
+      .ltx-code-box {
+        font-family: "Fira Mono", "Courier New", monospace;
+        font-size: 0.78rem;
+        line-height: 1.7;
+        background: #0f172a;
+        color: #e2e8f0;
+        border-radius: 12px;
+        padding: 1.5rem;
+        overflow-x: auto;
+        white-space: pre;
+        max-height: 420px;
+        overflow-y: auto;
+        border: 1px solid #1e293b;
+        box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.3);
+      }
+      .ltx-generate-btn {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        transition: all 0.3s ease;
+      }
+      .ltx-generate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45);
+      }
+      .ltx-generate-btn:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .ltx-overleaf-btn {
+        background: #4caf50;
+        transition: all 0.3s ease;
+      }
+      .ltx-overleaf-btn:hover {
+        background: #388e3c;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+      }
+      .ltx-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        background: rgba(99, 102, 241, 0.06);
+        border: 1px solid rgba(99, 102, 241, 0.14);
+        font-size: 0.82rem;
+      }
+      .dark .ltx-step {
+        background: rgba(99, 102, 241, 0.1);
+        border-color: rgba(99, 102, 241, 0.2);
+      }
+
+      /* LaTeX modal overlay */
+      #ltxModal {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-colors duration-300"
+  >
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i id="themeIcon" class="fas fa-moon text-white"></i>
+      <span class="text-white text-sm ml-2" id="themeText">Dark Mode</span>
+    </div>
+
+    <!-- Home Button (shown only when main app is visible) -->
+    <div
+      id="homeBtn"
+      onclick="goToHome()"
+      class="hidden"
+      style="
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+      onmouseover="
+        this.style.background = 'rgba(255,255,255,0.2)';
+        this.style.transform = 'scale(1.05)';
+      "
+      onmouseout="
+        this.style.background = 'rgba(255,255,255,0.1)';
+        this.style.transform = 'scale(1)';
+      "
+    >
+      <i class="fas fa-home text-white"></i>
+      <span class="text-white text-sm ml-2">Home</span>
+    </div>
+
+    <!-- Header -->
+    <header id="siteHeader" class="gradient-bg text-white py-8 shadow-2xl">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-5xl font-bold mb-2">
+            <i class="fas fa-robot mr-3"></i>AI Resume Analyzer Pro
+          </h1>
+          <p class="text-xl opacity-90">
+            Comprehensive insights • AI-powered scoring • Authenticity
+            verification
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== WELCOME PAGE ===== -->
+    <div id="welcomeSection" class="welcome-hero min-h-screen flex flex-col">
+      <!-- Nav bar inside welcome -->
+      <div class="flex items-center justify-between px-8 py-5 relative z-10">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-xl flex items-center justify-center glow-ring"
+            style="background: linear-gradient(135deg, #667eea, #764ba2)"
+          >
+            <i class="fas fa-robot text-white text-sm"></i>
+          </div>
+          <span class="text-white font-bold text-lg tracking-tight"
+            >AI Resume Analyzer
+            <span class="text-indigo-300 text-sm font-medium">Pro</span></span
+          >
+        </div>
+        <button
+          onclick="goToUpload()"
+          class="text-indigo-300 hover:text-white text-sm font-medium transition-colors flex items-center gap-2"
+        >
+          Skip to upload <i class="fas fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Hero -->
+      <div
+        class="flex-1 flex flex-col items-center justify-center text-center px-6 py-12 relative z-10"
+      >
+        <div class="float-anim mb-8 slide-up">
+          <div
+            class="w-24 h-24 rounded-3xl glow-ring flex items-center justify-center mx-auto"
+            style="background: linear-gradient(135deg, #667eea, #764ba2)"
+          >
+            <i class="fas fa-file-alt text-white text-4xl"></i>
+          </div>
+        </div>
+
+        <h1
+          class="text-5xl md:text-6xl font-extrabold text-white mb-5 leading-tight slide-up slide-up-delay-1"
+        >
+          Is Your Resume<br />
+          <span
+            style="
+              background: linear-gradient(135deg, #a5b4fc, #e879f9);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+            >ATS-Ready?</span
+          >
+        </h1>
+
+        <p
+          class="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed slide-up slide-up-delay-2"
+        >
+          Upload your resume and get an AI-powered analysis in seconds — ATS
+          score, skill gaps, authenticity check, and personalized improvement
+          suggestions.
+        </p>
+
+        <!-- Stats row -->
+        <div
+          class="flex flex-wrap justify-center gap-4 mb-12 slide-up slide-up-delay-3"
+        >
+          <div class="stat-card px-5 py-3 flex items-center gap-3">
+            <i class="fas fa-brain text-indigo-400 text-xl"></i>
+            <div class="text-left">
+              <div class="text-white font-bold text-lg leading-none">93%+</div>
+              <div class="text-gray-400 text-xs">Accuracy</div>
+            </div>
+          </div>
+          <div class="stat-card px-5 py-3 flex items-center gap-3">
+            <i class="fas fa-bolt text-yellow-400 text-xl"></i>
+            <div class="text-left">
+              <div class="text-white font-bold text-lg leading-none">
+                &lt;10s
+              </div>
+              <div class="text-gray-400 text-xs">Analysis Time</div>
+            </div>
+          </div>
+          <div class="stat-card px-5 py-3 flex items-center gap-3">
+            <i class="fas fa-layer-group text-green-400 text-xl"></i>
+            <div class="text-left">
+              <div class="text-white font-bold text-lg leading-none">
+                8 Skills
+              </div>
+              <div class="text-gray-400 text-xs">Categories</div>
+            </div>
+          </div>
+          <div class="stat-card px-5 py-3 flex items-center gap-3">
+            <i class="fas fa-shield-alt text-pink-400 text-xl"></i>
+            <div class="text-left">
+              <div class="text-white font-bold text-lg leading-none">Auth</div>
+              <div class="text-gray-400 text-xs">Verified</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main CTA -->
+        <button
+          onclick="goToUpload()"
+          class="cta-btn text-white text-lg font-bold px-12 py-5 rounded-2xl inline-flex items-center gap-3 slide-up slide-up-delay-4"
+        >
+          <i class="fas fa-upload"></i>
+          Analyze My Resume
+          <i class="fas fa-arrow-right text-sm opacity-70"></i>
+        </button>
+        <p class="text-gray-500 text-sm mt-4 slide-up slide-up-delay-4">
+          Supports PDF &amp; DOCX &nbsp;·&nbsp; Max 10MB &nbsp;·&nbsp; Free
+        </p>
+      </div>
+
+      <!-- Guidelines Grid -->
+      <div class="relative z-10 px-6 pb-16 max-w-7xl mx-auto w-full">
+        <div class="text-center mb-10 slide-up slide-up-delay-5">
+          <h2 class="text-3xl font-bold text-white mb-2">Before You Upload</h2>
+          <p class="text-gray-400">
+            Follow these guidelines to maximize your ATS score
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+          <!-- Structure -->
+          <div class="guideline-card rounded-2xl p-6">
+            <div
+              class="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+              style="background: rgba(99, 102, 241, 0.2)"
+            >
+              <i class="fas fa-align-left text-indigo-400 text-lg"></i>
+            </div>
+            <h3 class="text-white font-bold text-lg mb-3">Structure</h3>
+            <ul class="space-y-2 text-sm">
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Clear section headings (Experience, Skills, Education)
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Keep to 1–2 pages max
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Standard fonts (Arial, Calibri, Inter)
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-red-400">
+                <i
+                  class="fas fa-times-circle text-red-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Avoid tables, text boxes &amp; columns
+              </li>
+            </ul>
+          </div>
+          <!-- Contact Info -->
+          <div class="guideline-card rounded-2xl p-6">
+            <div
+              class="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+              style="background: rgba(16, 185, 129, 0.2)"
+            >
+              <i class="fas fa-user text-green-400 text-lg"></i>
+            </div>
+            <h3 class="text-white font-bold text-lg mb-3">Contact Info</h3>
+            <ul class="space-y-2 text-sm">
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Full name at the very top
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Professional email address
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >LinkedIn &amp; GitHub URLs
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >City, State / Country
+              </li>
+            </ul>
+          </div>
+          <!-- Skills -->
+          <div class="guideline-card rounded-2xl p-6">
+            <div
+              class="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+              style="background: rgba(245, 158, 11, 0.2)"
+            >
+              <i class="fas fa-tags text-yellow-400 text-lg"></i>
+            </div>
+            <h3 class="text-white font-bold text-lg mb-3">
+              Skills &amp; Keywords
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Dedicated Skills section
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Exact tool names (React, Python, AWS)
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Mirror keywords from job descriptions
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-red-400">
+                <i
+                  class="fas fa-times-circle text-red-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Don't list buzzwords without context
+              </li>
+            </ul>
+          </div>
+          <!-- Experience -->
+          <div class="guideline-card rounded-2xl p-6">
+            <div
+              class="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+              style="background: rgba(236, 72, 153, 0.2)"
+            >
+              <i class="fas fa-briefcase text-pink-400 text-lg"></i>
+            </div>
+            <h3 class="text-white font-bold text-lg mb-3">Experience</h3>
+            <ul class="space-y-2 text-sm">
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Dates: "Jan 2022 – Present"
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Strong action verbs (Led, Built, Reduced)
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-gray-300">
+                <i
+                  class="fas fa-check-circle text-green-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Quantify results ("improved speed by 40%")
+              </li>
+              <li class="checklist-item flex items-start gap-2 text-red-400">
+                <i
+                  class="fas fa-times-circle text-red-400 mt-0.5 flex-shrink-0"
+                ></i
+                >Avoid vague phrases like "responsible for"
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ATS Score Guide -->
+        <div class="guideline-card rounded-2xl p-6 mb-8">
+          <h3 class="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <i class="fas fa-tachometer-alt text-indigo-400"></i>
+            What Does Your ATS Score Mean?
+          </h3>
+          <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl"
+              style="
+                background: rgba(239, 68, 68, 0.1);
+                border: 1px solid rgba(239, 68, 68, 0.2);
+              "
+            >
+              <div class="text-2xl font-black text-red-400">0–40</div>
+              <div>
+                <div class="text-white font-semibold text-sm">Poor</div>
+                <div class="text-gray-400 text-xs">Likely rejected by ATS</div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl"
+              style="
+                background: rgba(245, 158, 11, 0.1);
+                border: 1px solid rgba(245, 158, 11, 0.2);
+              "
+            >
+              <div class="text-2xl font-black text-yellow-400">41–60</div>
+              <div>
+                <div class="text-white font-semibold text-sm">Fair</div>
+                <div class="text-gray-400 text-xs">Needs improvement</div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl"
+              style="
+                background: rgba(59, 130, 246, 0.1);
+                border: 1px solid rgba(59, 130, 246, 0.2);
+              "
+            >
+              <div class="text-2xl font-black text-blue-400">61–80</div>
+              <div>
+                <div class="text-white font-semibold text-sm">Good</div>
+                <div class="text-gray-400 text-xs">Passes most ATS filters</div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl"
+              style="
+                background: rgba(16, 185, 129, 0.1);
+                border: 1px solid rgba(16, 185, 129, 0.2);
+              "
+            >
+              <div class="text-2xl font-black text-green-400">81–100</div>
+              <div>
+                <div class="text-white font-semibold text-sm">Excellent</div>
+                <div class="text-gray-400 text-xs">Highly ATS-optimized</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="text-center pt-2">
+          <button
+            onclick="goToUpload()"
+            class="cta-btn text-white text-base font-bold px-10 py-4 rounded-2xl inline-flex items-center gap-3"
+          >
+            <i class="fas fa-rocket"></i>
+            I'm Ready — Analyze My Resume
+            <i class="fas fa-chevron-right text-xs opacity-70"></i>
+          </button>
+          <p class="text-gray-500 text-sm mt-3">
+            PDF or DOCX &nbsp;·&nbsp; Free &nbsp;·&nbsp; Instant Results
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end #welcomeSection -->
+
+    <!-- ===== MAIN APP (hidden until CTA click) ===== -->
+    <div id="mainAppContainer" class="hidden">
+      <!-- Main Container -->
+      <div class="container mx-auto px-4 py-8">
+        <!-- Upload Section -->
+        <div id="uploadSection" class="max-w-2xl mx-auto mb-8">
+          <div
+            class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 transition-colors duration-300"
+          >
+            <h2
+              class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+            >
+              <i class="fas fa-upload mr-3 text-primary"></i>
+              Upload Your Resume
+            </h2>
+
+            <div
+              class="border-4 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-12 text-center hover:border-primary dark:hover:border-primary transition-all cursor-pointer"
+              id="dropZone"
+            >
+              <i
+                class="fas fa-cloud-upload-alt text-6xl text-gray-400 dark:text-gray-500 mb-4"
+              ></i>
+              <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
+                Drag & drop your resume here
+              </p>
+              <p class="text-gray-500 dark:text-gray-400 mb-6">or</p>
+              <input
+                type="file"
+                id="fileInput"
+                accept=".pdf,.docx"
+                class="hidden"
+              />
+              <label
+                for="fileInput"
+                class="gradient-bg text-white px-8 py-3 rounded-lg cursor-pointer inline-block font-semibold hover:shadow-lg transition-all"
+              >
+                Choose File
+              </label>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                Supported: PDF, DOCX (Max 5MB)
+              </p>
+            </div>
+
+            <div id="uploadStatus" class="mt-4 hidden"></div>
+          </div>
+        </div>
+
+        <!-- ENHANCED Loading Indicator with Scanning Animation -->
+        <div id="loadingSection" class="hidden max-w-4xl mx-auto">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8">
+            <!-- Main Scanning Animation Container -->
+            <div class="relative">
+              <!-- Document Icon with Scanning Beam -->
+              <div class="flex justify-center mb-8">
+                <div class="relative">
+                  <!-- Document Icon -->
+                  <div class="document-container">
+                    <i
+                      class="fas fa-file-alt text-8xl text-gray-300 dark:text-gray-600"
+                    ></i>
+                    <!-- Scanning Beam -->
+                    <div class="scanning-beam"></div>
+                    <!-- Checkmarks appearing -->
+                    <div class="scan-check scan-check-1">
+                      <i class="fas fa-check-circle text-green-500"></i>
+                    </div>
+                    <div class="scan-check scan-check-2">
+                      <i class="fas fa-check-circle text-green-500"></i>
+                    </div>
+                    <div class="scan-check scan-check-3">
+                      <i class="fas fa-check-circle text-green-500"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Progress Text -->
+              <div class="text-center mb-6">
+                <h3
+                  class="text-2xl font-bold text-gray-800 dark:text-white mb-2 flex items-center justify-center"
+                >
+                  <div class="typing-dots mr-3">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span id="loadingText">Analyzing Resume</span>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300" id="loadingSubtext">
+                  Extracting information...
+                </p>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="mb-6">
+                <div
+                  class="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden"
+                >
+                  <div
+                    id="progressBar"
+                    class="progress-bar-fill h-full rounded-full transition-all duration-500"
+                  ></div>
+                  <div class="progress-bar-shimmer"></div>
+                </div>
+                <div class="flex justify-between mt-2 text-sm">
+                  <span class="text-gray-600 dark:text-gray-400"
+                    >Processing</span
+                  >
+                  <span class="text-primary font-semibold" id="progressPercent"
+                    >0%</span
+                  >
+                </div>
+              </div>
+
+              <!-- Analysis Steps -->
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div class="analysis-step" id="step1">
+                  <div class="step-icon">
+                    <i class="fas fa-file-upload text-blue-500"></i>
+                  </div>
+                  <div class="step-text">
+                    <div class="font-semibold text-gray-700 dark:text-gray-200">
+                      Upload
+                    </div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                      Received
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analysis-step" id="step2">
+                  <div class="step-icon">
+                    <i class="fas fa-search text-purple-500"></i>
+                  </div>
+                  <div class="step-text">
+                    <div class="font-semibold text-gray-700 dark:text-gray-200">
+                      Extract
+                    </div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                      Scanning...
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analysis-step" id="step3">
+                  <div class="step-icon">
+                    <i class="fas fa-brain text-pink-500"></i>
+                  </div>
+                  <div class="step-text">
+                    <div class="font-semibold text-gray-700 dark:text-gray-200">
+                      Analyze
+                    </div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                      AI Processing
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analysis-step" id="step4">
+                  <div class="step-icon">
+                    <i class="fas fa-chart-line text-green-500"></i>
+                  </div>
+                  <div class="step-text">
+                    <div class="font-semibold text-gray-700 dark:text-gray-200">
+                      Score
+                    </div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                      Calculating
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fun Facts (rotating) -->
+              <div class="text-center">
+                <div
+                  class="inline-flex items-center bg-blue-50 dark:bg-blue-900/20 px-6 py-3 rounded-full"
+                >
+                  <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                  <span
+                    class="text-sm text-gray-700 dark:text-gray-300"
+                    id="funFact"
+                  >
+                    Did you know? ATS systems scan resumes in less than 6
+                    seconds!
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden fade-in">
+          <!-- Score Cards -->
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <!-- ATS Score -->
+            <div
+              class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 card-hover"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3
+                  class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                >
+                  ATS Score
+                </h3>
+                <i class="fas fa-robot text-2xl text-blue-500"></i>
+              </div>
+              <div class="text-center">
+                <div
+                  class="text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2"
+                  id="atsScore"
+                >
+                  0
+                </div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">
+                  out of 100
+                </div>
+                <div
+                  class="mt-4 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    id="atsBar"
+                    class="h-2 rounded-full bg-blue-500 progress-bar-animated"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overall Score -->
+            <div
+              class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 card-hover"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3
+                  class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                >
+                  Overall Score
+                </h3>
+                <i class="fas fa-star text-2xl text-yellow-500"></i>
+              </div>
+              <div class="text-center">
+                <div
+                  class="text-5xl font-bold text-yellow-600 dark:text-yellow-400 mb-2"
+                  id="overallScore"
+                >
+                  0
+                </div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">
+                  out of 100
+                </div>
+                <div
+                  class="mt-4 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    id="overallBar"
+                    class="h-2 rounded-full bg-yellow-500 progress-bar-animated"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authenticity Score -->
+            <div
+              class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 card-hover"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3
+                  class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                >
+                  Authenticity
+                </h3>
+                <i class="fas fa-shield-alt text-2xl text-green-500"></i>
+              </div>
+              <div class="text-center">
+                <div
+                  class="text-5xl font-bold text-green-600 dark:text-green-400 mb-2"
+                  id="authScore"
+                >
+                  0
+                </div>
+                <p
+                  class="text-xs text-green-600 dark:text-green-400 mt-2 font-semibold"
+                  id="authVerdict"
+                >
+                  Verified
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Authenticity Details -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+            >
+              <i class="fas fa-shield-alt mr-3 text-green-500"></i>
+              Authenticity Analysis
+            </h3>
+            <div class="grid md:grid-cols-2 gap-4" id="authenticityContent">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Score Breakdown -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+            >
+              <i class="fas fa-chart-bar mr-3 text-primary"></i>
+              Score Breakdown
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >ATS Compatibility</span
+                  >
+                  <span
+                    class="text-sm font-semibold text-gray-900 dark:text-white"
+                    id="breakdownATS"
+                    >0%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    id="breakdownATSBar"
+                    class="h-2 rounded-full bg-blue-500 progress-bar-animated"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >Profile Completeness</span
+                  >
+                  <span
+                    class="text-sm font-semibold text-gray-900 dark:text-white"
+                    id="breakdownCompleteness"
+                    >0%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    id="breakdownCompletenessBar"
+                    class="h-2 rounded-full bg-green-500 progress-bar-animated"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >Experience</span
+                  >
+                  <span
+                    class="text-sm font-semibold text-gray-900 dark:text-white"
+                    id="breakdownExperience"
+                    >0%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    id="breakdownExperienceBar"
+                    class="h-2 rounded-full bg-yellow-500 progress-bar-animated"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >Skills</span
+                  >
+                  <span
+                    class="text-sm font-semibold text-gray-900 dark:text-white"
+                    id="breakdownSkills"
+                    >0%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    id="breakdownSkillsBar"
+                    class="h-2 rounded-full bg-purple-500 progress-bar-animated"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span
+                    class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >Content Quality</span
+                  >
+                  <span
+                    class="text-sm font-semibold text-gray-900 dark:text-white"
+                    id="breakdownContent"
+                    >0%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2"
+                >
+                  <div
+                    id="breakdownContentBar"
+                    class="h-2 rounded-full bg-red-500 progress-bar-animated"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Details -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+            >
+              <i class="fas fa-user mr-3 text-primary"></i>
+              Personal Information
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6" id="personalDetails">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Experience Timeline -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+            >
+              <i class="fas fa-briefcase mr-3 text-primary"></i>
+              Work Experience
+            </h3>
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <div
+                class="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-xl"
+              >
+                <div
+                  class="text-3xl font-bold text-blue-600 dark:text-blue-300"
+                  id="totalYears"
+                >
+                  0
+                </div>
+                <div class="text-sm text-gray-600 dark:text-gray-300">
+                  Years Experience
+                </div>
+              </div>
+              <div
+                class="text-center p-4 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 rounded-xl"
+              >
+                <div
+                  class="text-3xl font-bold text-green-600 dark:text-green-300"
+                  id="totalPositions"
+                >
+                  0
+                </div>
+                <div class="text-sm text-gray-600 dark:text-gray-300">
+                  Positions Held
+                </div>
+              </div>
+              <div
+                class="text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 rounded-xl"
+              >
+                <div
+                  class="text-3xl font-bold text-purple-600 dark:text-purple-300"
+                  id="expLevel"
+                >
+                  -
+                </div>
+                <div class="text-sm text-gray-600 dark:text-gray-300">
+                  Experience Level
+                </div>
+              </div>
+            </div>
+            <div id="experienceTimeline">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+            >
+              <i class="fas fa-cogs mr-3 text-primary"></i>
+              Technical Skills
+            </h3>
+            <div id="skillsSection" class="space-y-6">
+              <!-- Populated by JS -->
+            </div>
+
+            <!-- Predicted Role -->
+            <div
+              class="mt-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900 dark:to-pink-900 rounded-xl border-2 border-purple-200 dark:border-purple-700"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                    AI Predicted Best-Fit Role
+                  </p>
+                  <p
+                    class="text-2xl font-bold text-purple-600 dark:text-purple-300"
+                    id="predictedRole"
+                  >
+                    Analyzing...
+                  </p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                    Confidence
+                  </p>
+                  <p
+                    class="text-2xl font-bold text-purple-600 dark:text-purple-300"
+                    id="roleConfidence"
+                  >
+                    --%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strengths & Improvements -->
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <!-- Advantages -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6">
+              <h3
+                class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+              >
+                <i class="fas fa-check-circle mr-3 text-green-500"></i>
+                Strengths
+              </h3>
+              <div id="advantagesSection" class="space-y-4">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Disadvantages -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6">
+              <h3
+                class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+              >
+                <i class="fas fa-exclamation-triangle mr-3 text-yellow-500"></i>
+                Areas to Improve
+              </h3>
+              <div id="disadvantagesSection" class="space-y-4">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Suggestions -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 mb-8">
+            <h3
+              class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center"
+            >
+              <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>
+              Personalized Recommendations
+            </h3>
+            <div id="suggestionsSection" class="space-y-4">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- ===== COVER LETTER GENERATOR ===== -->
+          <div class="cl-panel rounded-2xl shadow-xl p-8 mb-8">
+            <!-- Header row -->
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-11 h-11 rounded-xl flex items-center justify-center"
+                  style="background: linear-gradient(135deg, #667eea, #764ba2)"
+                >
+                  <i class="fas fa-envelope-open-text text-white text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
+                    Cover Letter Generator
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    AI-tailored to your resume &amp; the job description
+                  </p>
+                </div>
+              </div>
+              <span
+                class="text-xs px-3 py-1 rounded-full font-semibold"
+                style="
+                  background: rgba(102, 126, 234, 0.12);
+                  color: #667eea;
+                  border: 1px solid rgba(102, 126, 234, 0.3);
+                "
+              >
+                <i class="fas fa-magic mr-1"></i> AI Powered
+              </span>
+            </div>
+
+            <!-- Step 1: JD URL input -->
+            <div class="mb-6">
+              <label
+                class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+              >
+                <i class="fas fa-link mr-1 text-indigo-400"></i>
+                Paste Job Description URL
+                <span class="text-gray-400 font-normal"
+                  >(LinkedIn, Naukri, Indeed, any job portal)</span
+                >
+              </label>
+              <div class="flex gap-3 flex-wrap sm:flex-nowrap">
+                <input
+                  id="clJdUrl"
+                  type="url"
+                  placeholder="https://www.linkedin.com/jobs/view/... or https://www.naukri.com/..."
+                  class="cl-url-input flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white text-sm"
+                />
+                <button
+                  id="clGenerateBtn"
+                  onclick="generateCoverLetter()"
+                  class="cl-generate-btn text-white font-bold px-6 py-3 rounded-xl whitespace-nowrap"
+                >
+                  <i class="fas fa-bolt mr-2"></i>Generate Cover Letter
+                </button>
+              </div>
+              <p class="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                <i class="fas fa-info-circle mr-1"></i>
+                Leave blank to generate a general cover letter based on your
+                resume alone.
+              </p>
+            </div>
+
+            <!-- Status / matched skills bar (hidden until generated) -->
+            <div
+              id="clStatusBar"
+              class="hidden mb-5 p-4 rounded-xl bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700"
+            >
+              <div class="flex items-start gap-3 flex-wrap">
+                <div class="flex-1">
+                  <p
+                    class="text-sm font-semibold text-green-700 dark:text-green-300 mb-2"
+                  >
+                    <i class="fas fa-check-circle mr-1"></i>
+                    Cover letter tailored for
+                    <span id="clJobTitle" class="font-bold">—</span> at
+                    <span id="clCompanyName" class="font-bold">—</span>
+                  </p>
+                  <div id="clMatchedSkills" class="flex flex-wrap gap-2"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Error bar -->
+            <div
+              id="clErrorBar"
+              class="hidden mb-5 p-4 rounded-xl bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700"
+            >
+              <p class="text-sm text-red-700 dark:text-red-300">
+                <i class="fas fa-exclamation-triangle mr-1"></i>
+                <span id="clErrorMsg">Something went wrong.</span>
+              </p>
+            </div>
+
+            <!-- The letter itself (hidden until generated) -->
+            <div id="clLetterWrapper" class="hidden">
+              <div
+                class="flex items-center justify-between mb-3 flex-wrap gap-3"
+              >
+                <h4
+                  class="font-semibold text-gray-700 dark:text-gray-200 flex items-center gap-2"
+                >
+                  <i class="fas fa-file-alt text-indigo-400"></i> Your Cover
+                  Letter
+                </h4>
+                <div class="flex gap-2 flex-wrap">
+                  <button
+                    onclick="clCopyLetter()"
+                    class="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-all"
+                  >
+                    <i class="fas fa-copy text-indigo-400"></i> Copy
+                  </button>
+                  <button
+                    onclick="clDownloadLetter()"
+                    class="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-all"
+                  >
+                    <i class="fas fa-download text-green-400"></i> Download .txt
+                  </button>
+                  <button
+                    onclick="clRegenerateLetter()"
+                    class="flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg text-white transition-all"
+                    style="
+                      background: linear-gradient(135deg, #667eea, #764ba2);
+                    "
+                  >
+                    <i class="fas fa-sync-alt"></i> Regenerate
+                  </button>
+                </div>
+              </div>
+
+              <!-- Editable letter text area -->
+              <textarea
+                id="clLetterText"
+                rows="28"
+                class="cl-letter-box w-full resize-y text-sm"
+                spellcheck="true"
+              ></textarea>
+
+              <p
+                class="text-xs text-gray-400 dark:text-gray-500 mt-2 text-right"
+              >
+                <i class="fas fa-edit mr-1"></i> You can edit the letter
+                directly above before copying or downloading.
+              </p>
+            </div>
+          </div>
+          <!-- end cover letter panel -->
+
+          <!-- ===== COMPANY SUGGESTIONS ===== -->
+          <div class="co-panel rounded-2xl shadow-xl p-8 mb-8">
+            <!-- Header -->
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-2">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-11 h-11 rounded-xl flex items-center justify-center"
+                  style="background: linear-gradient(135deg, #10b981, #3b82f6)"
+                >
+                  <i class="fas fa-building text-white text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
+                    Recommended Companies
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Curated for your role &amp; experience level
+                  </p>
+                </div>
+              </div>
+              <!-- Level + Role badge — filled by JS -->
+              <div
+                id="coLevelBadge"
+                class="hidden co-level-pill"
+                style="
+                  background: rgba(16, 185, 129, 0.12);
+                  border: 1px solid rgba(16, 185, 129, 0.3);
+                  color: #10b981;
+                "
+              >
+                <i class="fas fa-layer-group text-xs"></i>
+                <span id="coLevelText">—</span>
+              </div>
+            </div>
+
+            <!-- Role tag line -->
+            <p
+              class="text-sm text-gray-500 dark:text-gray-400 mb-6 ml-14"
+              id="coRoleLine"
+            >
+              Loading suggestions…
+            </p>
+
+            <!-- Company grid — populated by JS -->
+            <div id="coGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <!-- skeleton placeholders -->
+              <div
+                class="company-card p-5 animate-pulse h-40 bg-gray-100 dark:bg-gray-700 rounded-2xl"
+              ></div>
+              <div
+                class="company-card p-5 animate-pulse h-40 bg-gray-100 dark:bg-gray-700 rounded-2xl"
+              ></div>
+              <div
+                class="company-card p-5 animate-pulse h-40 bg-gray-100 dark:bg-gray-700 rounded-2xl"
+              ></div>
+              <div
+                class="company-card p-5 animate-pulse h-40 bg-gray-100 dark:bg-gray-700 rounded-2xl hidden sm:block"
+              ></div>
+              <div
+                class="company-card p-5 animate-pulse h-40 bg-gray-100 dark:bg-gray-700 rounded-2xl hidden lg:block"
+              ></div>
+              <div
+                class="company-card p-5 animate-pulse h-40 bg-gray-100 dark:bg-gray-700 rounded-2xl hidden lg:block"
+              ></div>
+            </div>
+
+            <!-- Footer note -->
+            <p
+              class="text-xs text-gray-400 dark:text-gray-500 mt-5 text-center"
+            >
+              <i class="fas fa-info-circle mr-1"></i>
+              Suggestions are based on your detected role and experience level.
+              Click <strong>Apply Now</strong> to open the company's careers
+              page.
+            </p>
+          </div>
+          <!-- end company suggestions -->
+
+          <!-- ===== LATEX FOR OVERLEAF ===== -->
+          <div class="ltx-panel rounded-2xl shadow-xl p-8 mb-8">
+            <!-- Header -->
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-11 h-11 rounded-xl flex items-center justify-center"
+                  style="background: linear-gradient(135deg, #4f46e5, #7c3aed)"
+                >
+                  <i class="fas fa-code text-white text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
+                    LaTeX Resume for Overleaf
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Get a professional LaTeX resume ready to compile on Overleaf
+                  </p>
+                </div>
+              </div>
+              <span
+                class="text-xs px-3 py-1 rounded-full font-semibold"
+                style="
+                  background: rgba(79, 70, 229, 0.1);
+                  color: #6366f1;
+                  border: 1px solid rgba(79, 70, 229, 0.25);
+                "
+              >
+                <i class="fas fa-file-code mr-1"></i> .tex file
+              </span>
+            </div>
+
+            <!-- How-to steps -->
+            <div class="grid sm:grid-cols-3 gap-3 mb-6">
+              <div class="ltx-step">
+                <span
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                  style="background: #4f46e5"
+                  >1</span
+                >
+                <div>
+                  <div
+                    class="font-semibold text-gray-700 dark:text-gray-200 text-xs"
+                  >
+                    Generate
+                  </div>
+                  <div class="text-gray-500 dark:text-gray-400 text-xs mt-0.5">
+                    Click the button to build your LaTeX code from your resume
+                    analysis
+                  </div>
+                </div>
+              </div>
+              <div class="ltx-step">
+                <span
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                  style="background: #7c3aed"
+                  >2</span
+                >
+                <div>
+                  <div
+                    class="font-semibold text-gray-700 dark:text-gray-200 text-xs"
+                  >
+                    Copy or Download
+                  </div>
+                  <div class="text-gray-500 dark:text-gray-400 text-xs mt-0.5">
+                    Copy the code or download the
+                    <code class="bg-gray-100 dark:bg-gray-700 px-1 rounded"
+                      >.tex</code
+                    >
+                    file
+                  </div>
+                </div>
+              </div>
+              <div class="ltx-step">
+                <span
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                  style="background: #4caf50"
+                  >3</span
+                >
+                <div>
+                  <div
+                    class="font-semibold text-gray-700 dark:text-gray-200 text-xs"
+                  >
+                    Open in Overleaf
+                  </div>
+                  <div class="text-gray-500 dark:text-gray-400 text-xs mt-0.5">
+                    Paste into a new Overleaf project and hit Compile
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Generate button row -->
+            <div class="flex flex-wrap gap-3 mb-5">
+              <button
+                id="ltxGenerateBtn"
+                onclick="generateLatex()"
+                class="ltx-generate-btn text-white font-bold px-7 py-3 rounded-xl flex items-center gap-2"
+              >
+                <i class="fas fa-magic"></i> Generate LaTeX Code
+              </button>
+              <a
+                href="https://www.overleaf.com/project"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ltx-overleaf-btn text-white font-bold px-7 py-3 rounded-xl flex items-center gap-2"
+              >
+                <i class="fas fa-external-link-alt"></i> Open Overleaf
+              </a>
+            </div>
+
+            <!-- Error bar -->
+            <div
+              id="ltxErrorBar"
+              class="hidden mb-4 p-4 rounded-xl bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700"
+            >
+              <p class="text-sm text-red-700 dark:text-red-300">
+                <i class="fas fa-exclamation-triangle mr-1"></i>
+                <span id="ltxErrorMsg">Something went wrong.</span>
+              </p>
+            </div>
+
+            <!-- Code viewer (hidden until generated) -->
+            <div id="ltxCodeWrapper" class="hidden">
+              <!-- Action row -->
+              <div
+                class="flex items-center justify-between mb-3 flex-wrap gap-3"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                  <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                  <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                  <span
+                    class="text-xs text-gray-400 dark:text-gray-500 ml-2 font-mono"
+                    id="ltxFilename"
+                    >resume.tex</span
+                  >
+                </div>
+                <div class="flex gap-2 flex-wrap">
+                  <button
+                    onclick="ltxCopy()"
+                    class="flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-all"
+                  >
+                    <i class="fas fa-copy text-indigo-400"></i> Copy Code
+                  </button>
+                  <button
+                    onclick="ltxDownload()"
+                    class="flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-all"
+                  >
+                    <i class="fas fa-download text-green-400"></i> Download .tex
+                  </button>
+                  <button
+                    onclick="ltxOpenModal()"
+                    class="flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-lg text-white transition-all"
+                    style="
+                      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+                    "
+                  >
+                    <i class="fas fa-expand"></i> Full View
+                  </button>
+                </div>
+              </div>
+
+              <!-- Syntax-highlighted code preview -->
+              <div class="ltx-code-box" id="ltxCodeDisplay"></div>
+
+              <!-- Overleaf instructions card -->
+              <div
+                class="mt-4 p-4 rounded-xl"
+                style="
+                  background: rgba(76, 175, 80, 0.08);
+                  border: 1px solid rgba(76, 175, 80, 0.25);
+                "
+              >
+                <p
+                  class="text-sm font-semibold text-green-700 dark:text-green-300 mb-2"
+                >
+                  <i class="fas fa-leaf mr-1"></i> How to use in Overleaf
+                </p>
+                <ol
+                  class="text-xs text-gray-600 dark:text-gray-400 space-y-1 list-decimal list-inside"
+                >
+                  <li>
+                    Go to
+                    <a
+                      href="https://www.overleaf.com"
+                      target="_blank"
+                      class="text-green-600 dark:text-green-400 underline font-medium"
+                      >overleaf.com</a
+                    >
+                    and sign in (free account works)
+                  </li>
+                  <li>Click <strong>New Project → Blank Project</strong></li>
+                  <li>
+                    Delete the default content in
+                    <code class="bg-gray-100 dark:bg-gray-700 px-1 rounded"
+                      >main.tex</code
+                    >
+                  </li>
+                  <li>
+                    Paste your downloaded/copied LaTeX code and click
+                    <strong>Recompile</strong>
+                  </li>
+                  <li>
+                    Your professional resume will render instantly on the right
+                    panel ✅
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- end LaTeX panel -->
+
+          <!-- LaTeX Full-View Modal -->
+          <div
+            id="ltxModal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center p-4"
+            style="background: rgba(0, 0, 0, 0.7)"
+          >
+            <div
+              class="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-4xl max-h-screen flex flex-col"
+              style="height: 90vh"
+            >
+              <!-- Modal header -->
+              <div
+                class="flex items-center justify-between px-6 py-4 border-b border-gray-700 flex-shrink-0"
+              >
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-code text-indigo-400 text-xl"></i>
+                  <span
+                    class="text-white font-bold text-lg"
+                    id="ltxModalFilename"
+                    >resume.tex</span
+                  >
+                </div>
+                <div class="flex gap-2">
+                  <button
+                    onclick="ltxCopy()"
+                    class="flex items-center gap-2 px-4 py-2 text-sm font-bold rounded-lg bg-gray-700 hover:bg-gray-600 text-white transition-all"
+                  >
+                    <i class="fas fa-copy"></i> Copy
+                  </button>
+                  <button
+                    onclick="ltxDownload()"
+                    class="flex items-center gap-2 px-4 py-2 text-sm font-bold rounded-lg bg-green-700 hover:bg-green-600 text-white transition-all"
+                  >
+                    <i class="fas fa-download"></i> Download
+                  </button>
+                  <button
+                    onclick="ltxCloseModal()"
+                    class="flex items-center gap-2 px-4 py-2 text-sm font-bold rounded-lg bg-red-700 hover:bg-red-600 text-white transition-all"
+                  >
+                    <i class="fas fa-times"></i> Close
+                  </button>
+                </div>
+              </div>
+              <!-- Modal code area — fully editable -->
+              <textarea
+                id="ltxModalCode"
+                class="flex-1 w-full bg-gray-950 text-gray-100 p-6 font-mono text-xs leading-relaxed resize-none outline-none rounded-b-2xl"
+                style="background: #0a0f1e; overflow-y: auto"
+                spellcheck="false"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="text-center space-x-4">
+            <button
+              onclick="window.print()"
+              class="gradient-bg text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+            >
+              <i class="fas fa-download mr-2"></i>Download Report
+            </button>
+            <button
+              onclick="location.reload()"
+              class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-all"
+            >
+              <i class="fas fa-redo mr-2"></i>Analyze Another
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end #mainAppContainer -->
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-600 dark:text-gray-400">
+      <p class="mb-2">
+        Made with <i class="fas fa-heart text-red-500"></i> using AI & Machine
+        Learning
+      </p>
+      <p class="text-sm">
+        Advanced NLP • 93%+ Accuracy • 2,500+ Training Samples
+      </p>
+    </footer>
+
+    <script>
+      // Dark mode toggle
+      function toggleTheme() {
+        const html = document.documentElement;
+        const icon = document.getElementById("themeIcon");
+        const text = document.getElementById("themeText");
+
+        if (html.classList.contains("dark")) {
+          html.classList.remove("dark");
+          icon.className = "fas fa-moon text-white";
+          text.textContent = "Dark Mode";
+          localStorage.setItem("theme", "light");
+        } else {
+          html.classList.add("dark");
+          icon.className = "fas fa-sun text-white";
+          text.textContent = "Light Mode";
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // ===== WELCOME PAGE: transition to main app =====
+      function goToUpload() {
+        const welcome = document.getElementById("welcomeSection");
+        const main = document.getElementById("mainAppContainer");
+        const header = document.getElementById("siteHeader");
+        const toggle = document.querySelector(".theme-toggle");
+        const homeBtn = document.getElementById("homeBtn");
+
+        // Fade out welcome
+        welcome.style.transition = "opacity 0.4s ease";
+        welcome.style.opacity = "0";
+
+        setTimeout(() => {
+          welcome.classList.add("hidden");
+          main.classList.remove("hidden");
+          if (header) header.classList.remove("hidden");
+          if (toggle) toggle.classList.remove("hidden");
+          if (homeBtn) homeBtn.classList.remove("hidden");
+
+          // Smooth scroll to top
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 400);
+      }
+
+      // ===== HOME BUTTON: go back to welcome page =====
+      function goToHome() {
+        const welcome = document.getElementById("welcomeSection");
+        const main = document.getElementById("mainAppContainer");
+        const header = document.getElementById("siteHeader");
+        const toggle = document.querySelector(".theme-toggle");
+        const homeBtn = document.getElementById("homeBtn");
+
+        // Hide app
+        main.classList.add("hidden");
+        if (header) header.classList.add("hidden");
+        if (homeBtn) homeBtn.classList.add("hidden");
+
+        // Fade welcome back in
+        welcome.style.opacity = "0";
+        welcome.classList.remove("hidden");
+        setTimeout(() => {
+          welcome.style.transition = "opacity 0.4s ease";
+          welcome.style.opacity = "1";
+        }, 20);
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Check for saved theme preference
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.getElementById("themeIcon").className =
+            "fas fa-sun text-white";
+          document.getElementById("themeText").textContent = "Light Mode";
+        }
+
+        // Hide header & theme toggle on welcome screen
+        const header = document.getElementById("siteHeader");
+        const toggle = document.querySelector(".theme-toggle");
+        if (header) header.classList.add("hidden");
+        if (toggle) toggle.classList.add("hidden");
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
